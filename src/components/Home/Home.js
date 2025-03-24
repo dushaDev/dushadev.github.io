@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <section 
-      className="relative flex items-center justify-center h-screen text-white p-10" 
+      className="relative flex items-center justify-center h-screen text-white md:px-20 lg:px-20" 
       style={{ backgroundImage: "url('/background-pattern.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
+        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center hover:scale-101 transition-transform duration-300">
           <div className="w-44 h-44 md:w-72 md:h-72 border-4 border-primary rounded-full overflow-hidden">
             <Image 
               src="/profile.jpg" 
