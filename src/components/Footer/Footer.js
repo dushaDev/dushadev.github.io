@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { IoIosArrowUp } from 'react-icons/io';
 
-const Footer = () => {
+export default function Footer(){
   return (
     <footer className="top-2 left-0 w-full bg-on-background p-4 shadow-[0_-4px_15px_6px_rgba(0,0,0,0.1)] py-5 relative">
       <div className="flex flex-col items-center">
@@ -10,13 +10,13 @@ const Footer = () => {
           <span className="text-primary">{'{ '}</span>Dusha<span className="font-bold"><span className="text-primary">{'D'}</span>ev</span><span className="text-primary">{' }'}</span>
         </h2>
         <div className="justify-center flex space-x-4 mt-3 sm:justify-center md:justify-start lg:justify-start">
-            <Link href="#" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
+            <Link href="https://github.com/dushaDev" target="_blank" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
               <FaGithub />
             </Link>
-            <Link href="#" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
+            <Link href="https://www.linkedin.com/in/dushan-beligala-360252196/" target="_blank" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
               <FaLinkedin />
             </Link>
-            <Link href="#" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
+            <Link href="https://web.facebook.com/byDushana/" target="_blank" className="text-primary hover:text-white text-3xl transition-colors duration-200 ease-in-out">
               <FaFacebook />
             </Link>
           </div>
@@ -34,4 +34,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+

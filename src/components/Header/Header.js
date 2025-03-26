@@ -9,10 +9,11 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const headerItems = [
-    { name: 'Home', path: 'home' },
-    { name: 'About', path: 'about' },
-    { name: 'Projects', path: 'projects' },
-    { name: 'Contact', path: 'contact' },
+    { name: 'Home', path: 'home',status:true },
+    { name: 'About', path: 'about',status:true },
+    { name: 'Skills', path: 'skills',status:false },
+    { name: 'Projects', path: 'projects',status:true },
+    { name: 'Contact', path: 'contact',status:true },
   ];
 
   const toggleMenu = () => {
@@ -49,6 +50,9 @@ const Header = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10">
           {headerItems.map((item) => (
+            item.status?
+
+            
             <li key={item.path}>
               <a
                 href={`#${item.path}`}
@@ -61,7 +65,7 @@ const Header = () => {
                   <span className="absolute left-0 bottom-0 w-full h-1 bg-primary"></span>
                 )}
               </a>
-            </li>
+            </li>:null
           ))}
         </ul>
 
@@ -75,6 +79,7 @@ const Header = () => {
       {isOpen && (
         <ul className="md:hidden flex flex-col items-center bg-background text-white py-4 absolute w-full top-14 left-0 shadow-md">
           {headerItems.map((item) => (
+            item.status?
             <li key={item.path} className="py-2">
               <a
                 href={`#${item.path}`}
@@ -83,7 +88,7 @@ const Header = () => {
               >
                 {item.name}
               </a>
-            </li>
+            </li>:null
           ))}
         </ul>
       )}

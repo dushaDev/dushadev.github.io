@@ -20,22 +20,21 @@ const skillsData = [
     icon: <AiOutlineAntDesign width={20} height={20} />,
     category: "Front-end",
     skills: [
-      { name: "Flutter", altText: "Flutter", icon: "/skills/flutter.png" },
-      { name: "React", altText: "React", icon: "/skills/react.webp" },
-      { name: "Flutter", altText: "Flutter", icon: "/skills/flutter.png" },
-      { name: "React", altText: "React", icon: "/skills/react.webp" },
-      { name: "Flutter", altText: "Flutter", icon: "/skills/flutter.png" },
-      { name: "React", altText: "React", icon: "/skills/react.webp" },
+      { name: "Flutter", altText: "flutter", icon: "/skills/flutter.png" },
+      { name: "React", altText: "react", icon: "/skills/react.webp" },
+  
     ],
   },
   {
     icon: <FaGears />,
     category: "Back-end",
     skills: [
-      { name: "Node.js", altText: "Node.js", icon: "/skills/flutter.png" },
-      { name: "Express", altText: "Express", icon: "/skills/flutter.png" },
-      { name: "Flutter", altText: "Flutter", icon: "/skills/flutter.png" },
-      { name: "React", altText: "React", icon: "/skills/react.webp" },
+      { name: "Java", altText: "java", icon: "/skills/java.webp" },
+      { name: "PHP", altText: "php", icon: "/skills/php.webp" },
+      { name: "Dart", altText: "dart", icon: "/skills/dart.png" },
+      { name: "Python", altText: "python", icon: "/skills/python.png" },
+      { name: "SQL",altText:"sql",icon:"/skills/sql.webp"},
+      {name:"Android Native",altText:"android",icon:"/skills/android.png"}
     ],
   },
   {
@@ -44,8 +43,8 @@ const skillsData = [
     skills: [
       { name: "Figma", altText: "Figma", icon: "/skills/figma.webp" },
       { name: "Adobe XD", altText: "Adobe XD", icon: "/skills/xd.png" },
-      { name: "Flutter", altText: "Flutter", icon: "/skills/flutter.png" },
-      { name: "React", altText: "React", icon: "/skills/react.webp" },
+      {name: "Adobe Illustrator",altText:"Adobe Illustrator",icon:"/skills/ai.png"}
+   
     ],
   },
 ];

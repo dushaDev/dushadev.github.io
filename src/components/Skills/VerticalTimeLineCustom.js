@@ -25,7 +25,7 @@ export default function VerticalTimelineCustom({ icon, category, skills }) {
         </div>
         <div className="flex items-end justify-end gap-5">
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center  hover:scale-101 transition-transform duration-200">
               <Image
                 src={skill.icon}
                 alt={skill.altText}
