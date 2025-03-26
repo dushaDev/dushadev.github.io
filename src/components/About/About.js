@@ -34,18 +34,18 @@ export default function About() {
 
         {/* Text Section */}
         <div className="w-full md:w-2/3 text-center md:text-left mt-10 mb-10 md:mt-0 md:ml-10 ">
-          <p className="text-3xl font-semibold mt-4">I'm</p>
+          <p className="text-3xl font-semibold mt-4">Hey</p>
           <p className="text-xl mt-2">
-          Hey there! I'm a 25-year-old <span className="text-primary">Software Engineering</span> undergraduate who loves coding, creativity, and problem-solving. 
-          When I'm not immersed in tech, you’ll find me enjoying <span className="text-primary">music</span> —either listening to my favorite songs or playing the <span className="text-primary">guitar</span>. 
+          there! I&apos;m a <span className="text-primary">Software Engineering</span> undergraduate who loves coding, creativity, and problem-solving. 
+          When I&apos;m not immersed in tech, you&apos;ll find me enjoying <span className="text-primary">music</span> —either listening to my favorite songs or playing the <span className="text-primary">guitar</span>. 
         
           </p>
           <p className="text-xl mt-4">
-          I have a thing for the color <span className="text-blue-400">Blue</span> (calm and cool, just like my approach to life!). Always <span className="text-primary">curious</span> and eager to learn, I'm passionate about turning ideas into meaningful digital experiences.
+          I have a thing for the color <span className="text-blue-400">Blue</span> (calm and cool, just like my approach to life!). Always <span className="text-primary">curious</span> and eager to learn, I&apos;m passionate about turning ideas into meaningful digital experiences.
           
           </p>
           <p className="text-xl mt-4">
-         Let’s build something awesome together! 😊
+         Let&apos;s build something awesome together! 😊
           
           </p>
         </div>

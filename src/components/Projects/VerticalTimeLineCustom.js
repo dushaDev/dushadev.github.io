@@ -34,7 +34,7 @@ export default function VerticalTimelineCustom({ time, items }) {
             className=" bg-on-background border-4 border-primary rounded-sm shadow-lg max-w-70  hover:scale-101 transition-transform duration-300"
           >
             <div className="relative rounded- overflow-hidden">
-              <img
+              <Image
                 src={item.image}
                 alt={item.name}
                 className="w-60 h-50 object-cover"
@@ -47,7 +47,7 @@ export default function VerticalTimelineCustom({ time, items }) {
                     className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400"
                   >
                     {/* <span>{tech.name}</span> */}
-                    <img
+                    <Image
                       className=" object-cover"
                       src={tech.icon}
                       alt={tech.name}

@@ -37,7 +37,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [headerItems]);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-on-background p-4 shadow-lg z-50">
