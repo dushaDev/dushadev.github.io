@@ -5,11 +5,7 @@ import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const images = [
-  '/pics/pic1.jpg',
-  '/pics/pic2.jpg',
-  '/pics/pic3.jpg',
-];
+const images = ["/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
   const [fade, setFade] = useState(true);
@@ -43,18 +39,36 @@ export default function Home() {
           </h1>
           <p className="text-4xl mt-3">Undergraduate in Software Engineering</p>
 
-          <button className="mt-7 px-6 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary  font-semibold rounded-sm shadow-md transition">
-            Get CV
-          </button>
+          <a
+            href="https://drive.google.com/file/d/1n--ewgHiY6CKVkJFCJv0YEMcbYIDVX6a/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-7 px-6 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary font-semibold rounded-sm shadow-md transition">
+              Resume Here
+            </button>
+          </a>
 
           <div className="justify-center flex space-x-4 mt-7 sm:justify-center md:justify-start lg:justify-start">
-            <Link href="https://github.com/dushaDev" target="_blank" className="text-primary hover:text-white text-3xl">
+            <Link
+              href="https://github.com/dushaDev"
+              target="_blank"
+              className="text-primary hover:text-white text-3xl"
+            >
               <FaGithub />
             </Link>
-            <Link href="https://www.linkedin.com/in/dushan-beligala-360252196/" target="_blank" className="text-primary hover:text-white text-3xl">
+            <Link
+              href="https://www.linkedin.com/in/dushan-beligala-360252196/"
+              target="_blank"
+              className="text-primary hover:text-white text-3xl"
+            >
               <FaLinkedin />
             </Link>
-            <Link href="https://web.facebook.com/byDushana/" target="_blank" className="text-primary hover:text-white text-3xl">
+            <Link
+              href="https://web.facebook.com/byDushana/"
+              target="_blank"
+              className="text-primary hover:text-white text-3xl"
+            >
               <FaFacebook />
             </Link>
           </div>
@@ -68,7 +82,9 @@ export default function Home() {
               width={280}
               height={280}
               key={currentImage}
-              className={` object-cover w-full h-full transition-opacity duration-1000 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}
+              className={` object-cover w-full h-full transition-opacity duration-1000 ease-in-out ${
+                fade ? "opacity-100" : "opacity-0"
+              }`}
             />
           </div>
         </div>

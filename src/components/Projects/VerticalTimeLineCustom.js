@@ -37,6 +37,8 @@ export default function VerticalTimelineCustom({ time, items }) {
               <Image
                 src={item.image}
                 alt={item.name}
+                width={100}
+                height={100}
                 className="w-60 h-50 object-cover"
               />
               {/* Icons inside the image */}
