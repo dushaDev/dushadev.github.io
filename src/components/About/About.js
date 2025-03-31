@@ -1,11 +1,61 @@
 "use client";
 
 import Image from "next/image";
+import { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Animation for left element
+    gsap.fromTo(leftRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+          end: "top 20%",
+          scrub: 0.6, 
+          markers: false
+        }
+      }
+    );
+
+    // Animation for right element
+    gsap.fromTo(rightRef.current,
+      { x: '100%', opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "top 10%",
+          scrub: 0.6,
+          markers: false
+        }
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
+
   return (
-    <section
-      className="relative flex items-center justify-center h-screen md:px-20 lg:px-20 "
+    <section ref={containerRef}
+      className="relative flex items-center justify-center h-screen md:px-20 lg:px-20"
       style={{
         backgroundImage: "url('/background-pattern.png')",
         backgroundSize: "cover",
@@ -20,7 +70,7 @@ export default function About() {
      
 
         {/* Image Section */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-start hover:scale-101 transition-transform duration-300">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start hover:scale-101 transition-transform duration-300" ref={leftRef}>
           <div className="w-64 h-80 rounded-lg overflow-hidden border-4 border-primary shadow-lg">
             <Image
               src="/pics/pic2.jpg"
@@ -33,7 +83,7 @@ export default function About() {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-2/3 text-center md:text-left mt-10 mb-10 md:mt-0 md:ml-10 ">
+        <div className="w-full md:w-2/3 text-center md:text-left mt-10 mb-10 md:mt-0 md:ml-10 " ref={rightRef}>
           <p className="text-3xl font-semibold mt-4">Hey</p>
           <p className="text-xl mt-2">
           there! I&apos;m a <span className="text-primary">Software Engineering</span> undergraduate who loves coding, creativity, and problem-solving. 
