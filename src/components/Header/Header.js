@@ -27,7 +27,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   const topToBottom = useRef(null);
-
+//Animation for loading header
   useEffect(() => {
     gsap.fromTo(
       topToBottom.current,
@@ -36,6 +36,7 @@ const Header = () => {
     );
   }, []);
 
+  //Header section handling
   useEffect(() => {
     const handleScroll = () => {
       let currentSection = 'home';
