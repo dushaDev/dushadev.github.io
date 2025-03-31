@@ -47,34 +47,36 @@ export default function About() {
     );
 
     // Animation for right element(Text)
+    //open
     gsap.fromTo(rightRef.current,
-      { x: '100%',y:'-30%', opacity: 0 },
+      { x: '50%',y:'-10%', opacity: 0 },
       {
         x: 0,
         y:0,
         opacity: 1,
         duration: 1,
-        ease: "power3.out",
+        ease: "power3.in",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 100%",
-          end: "top 5%",
+          end: "top 20%",
           scrub: 0.6,
           markers: false
         }
       }
     );
+    //close
     gsap.fromTo(rightRef.current,
       { x: 0,y:0, opacity: 1 },
       {
-        x: '100%',y:'30%',
+        x: '50%',y:'10%',
         opacity: 0,
         duration: 1,
         ease: "power3.in",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 0%",
-          end: "bottom 0%",
+          end: "bottom 30%",
           scrub: 0.6,
           markers: false
         }

@@ -34,13 +34,13 @@ export default function Home() {
       { x: 0, duration: 1, opacity: 1, scale: 1, ease: "power3.out" }
     );
 
-    // After animation for left element(Image)
+    // After animation for left element(Text)
     gsap.fromTo(
       leftRef.current,
       { x: 0, y: 0, opacity: 1 },
       {
         x: "-30%",
-        y: "30%",
+        y: "10%",
         opacity: 0,
         duration: 1,
 
@@ -54,7 +54,7 @@ export default function Home() {
       }
     );
 
-    // After animation for right element(Text)
+    // After animation for right element(Image)
     gsap.fromTo(
       rightRef.current,
       { opacity: 1 },
