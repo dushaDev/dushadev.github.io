@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useState, useRef} from "react";
 import Image from "next/image";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { FaGears } from "react-icons/fa6";
 import { IoIosApps } from "react-icons/io";
-
+gsap.registerPlugin(ScrollTrigger);
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -50,19 +52,43 @@ const skillsData = [
 ];
 
 export default function Skills() {
+  const skillRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Animation for left element
+    gsap.fromTo(skillRef.current,
+      { y: '5%', scale: 0.8,opacity: 0 },
+      {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+          end: "top 20%",
+          scrub: 0.6, 
+          markers: true
+        }
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
     <section
-      className="relative flex items-center justify-center h-screen text-white md:px-20 lg:px-20 "
-      style={{
-        backgroundImage: "url('/background-pattern.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative flex items-center justify-center h-screen text-white md:px-20 lg:px-20 my-10" ref={containerRef}
+
     >
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-center text-4xl font-bold my-10">SKILLS</h2>
 
-        <VerticalTimeline>
+<div className="container mx-auto flex flex-col md:flex-row items-center" ref={skillRef}>
+        <VerticalTimeline  >
           {skillsData.map((section, index) => (
             <VerticalTimelineCustom
               key={index}
@@ -71,7 +97,7 @@ export default function Skills() {
               skills={section.skills}
             />
           ))}
-        </VerticalTimeline>
+        </VerticalTimeline></div>
       </div>
     </section>
   );

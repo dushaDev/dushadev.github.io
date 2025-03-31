@@ -1,9 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
 
+gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -19,6 +26,15 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const topToBottom = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      topToBottom.current,
+      { y: "-100%", opacity: 0 },
+      { y: 0,  duration: 0.8, opacity: 1, ease: "power3.out" }
+    );
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +56,7 @@ const Header = () => {
   }, [headerItems]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-on-background p-4 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 w-full bg-on-background p-4 shadow-lg z-50" ref={topToBottom}>
       <div className="container mx-auto flex justify-between items-center">
         {/* Brand */}
         <h1 className="text-white text-2xl font-light">

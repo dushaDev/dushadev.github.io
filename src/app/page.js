@@ -7,24 +7,23 @@ import Contact from "@/components/Contact/Contact";
 export default function Page() {
   return (
     <>
-      <section id="home">
-        <Home />
-      </section>
-
-      <section id="about">
-        <About />
-      </section>
-
-      <section id="skills">
-        <Skills />
-      </section>
-      <section id="projects">
-        <Projects/>
-      </section>
-      <section id="contact">
-        <Contact/>
-      </section>
-
+      <div className="globalBackground overflow-x-hidden">
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
     </>
   );
 }

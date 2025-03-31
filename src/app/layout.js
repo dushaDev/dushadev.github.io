@@ -3,11 +3,10 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
-
 const inriaSans = Inria_Sans({
   variable: "--font-inria-sans",
   subsets: ["latin"],
-  weight: [ "300", "400", "700"],
+  weight: ["300", "400", "700"],
 });
 
 export const metadata = {
@@ -21,9 +20,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${inriaSans.variable} antialiased bg-background text-foreground`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
