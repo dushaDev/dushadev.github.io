@@ -14,33 +14,67 @@ export default function About() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Animation for left element
+    // Animation for left element(Image)
     gsap.fromTo(leftRef.current,
       { opacity: 0 },
       {
         opacity: 1,
         duration: 1,
+        ease: "power3.in",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 70%",
+          start: "top 60%",
           end: "top 20%",
           scrub: 0.6, 
           markers: false
         }
       }
     );
-
-    // Animation for right element
-    gsap.fromTo(rightRef.current,
-      { x: '100%', opacity: 0 },
+    gsap.fromTo(leftRef.current,
+      { opacity: 1 },
       {
-        x: 0,
-        opacity: 1,
+        opacity: 0,
         duration: 1,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
-          end: "top 10%",
+          start: "bottom 80%",
+          end: "bottom 30%",
+          scrub: 0.6, 
+          markers: false
+        }
+      }
+    );
+
+    // Animation for right element(Text)
+    gsap.fromTo(rightRef.current,
+      { x: '100%',y:'-30%', opacity: 0 },
+      {
+        x: 0,
+        y:0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 100%",
+          end: "top 5%",
+          scrub: 0.6,
+          markers: false
+        }
+      }
+    );
+    gsap.fromTo(rightRef.current,
+      { x: 0,y:0, opacity: 1 },
+      {
+        x: '100%',y:'30%',
+        opacity: 0,
+        duration: 1,
+        ease: "power3.in",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 0%",
+          end: "bottom 0%",
           scrub: 0.6,
           markers: false
         }
@@ -56,11 +90,6 @@ export default function About() {
   return (
     <section ref={containerRef}
       className="relative flex items-center justify-center h-screen md:px-20 lg:px-20"
-      style={{
-        backgroundImage: "url('/background-pattern.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     > 
    
     <div className="container mx-auto px-6 flex flex-col items-center">

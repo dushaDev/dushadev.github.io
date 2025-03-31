@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+import { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +13,10 @@ export default function Contact() {
     message: "",
   });
   const [status, setStatus] = useState(null);
+  const contactRef1 = useRef(null);
+  const contactRef2 = useRef(null);
+  const contactRef3 = useRef(null);
+  const containerRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,15 +40,42 @@ export default function Contact() {
     }
   };
 
+  useEffect(() => {
+    //  Trigger animation for whole Contact section
+    gsap.fromTo(
+      [contactRef1.current,contactRef2.current,contactRef3.current],
+      {  y: '10%',scale:0.8, opacity: 0 },
+      {
+       
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.in",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 0.6,
+          markers: false,
+        },
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="py-10 px-6 text-center">
+    <section className="py-10 px-6 text-center" ref={containerRef}>
       <h2 className="text-center text-4xl font-bold mt-10 mb-10">CONTACT</h2>
-      <p className="text-secondary text-xl mb-8">
+      <p className="text-secondary text-xl mb-8" ref={contactRef1}>
         Have a question or want to work together? Leave your details and I&apos;ll
         get back to you as soon as possible.
       </p>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center" ref={contactRef2}>
         <div className="flex flex-col items-start space-y-4 mb-8">
           <div className="flex items-center space-x-3">
             <FaEnvelope className="text-primary text-xl" />
@@ -74,7 +108,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="max-w-md mx-auto">
+      <div className="max-w-md mx-auto" ref={contactRef3}>
         <h3 className="text-lg font-semibold mb-3">Send Message</h3>
         <form className="flex flex-col space-y-3" onSubmit={handleSubmit}>
           <input

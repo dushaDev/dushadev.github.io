@@ -10,6 +10,7 @@ export default function VerticalTimelineCustom({ icon, category, skills }) {
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{
+        animation: "none",
         background: "transparent",
         color: "var(--secondary)",
         boxShadow: "none",
