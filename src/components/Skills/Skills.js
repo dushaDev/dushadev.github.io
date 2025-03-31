@@ -69,7 +69,7 @@ export default function Skills() {
           start: "top 70%",
           end: "top 20%",
           scrub: 0.6, 
-          markers: true
+          markers: false
         }
       }
     );
