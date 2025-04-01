@@ -61,6 +61,11 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+      - name: Set environment variables
+        run: |
+          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.production
+          echo "EMAIL_FROM=${{ secrets.EMAIL_FROM }}" >> .env.production
+          echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env.production
       - name: Restore cache
         uses: actions/cache@v4
         with:
