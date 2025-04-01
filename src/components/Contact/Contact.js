@@ -2,51 +2,31 @@
 
 import { useState } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState(null);
-  const contactRef1 = useRef(null);
-  const contactRef2 = useRef(null);
-  const contactRef3 = useRef(null);
-  const containerRef = useRef(null);
+
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("loading");
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" }); // Reset form
-    } else {
-      setStatus("error");
-    }
-  };
+  const contactRef1 = useRef(null);
+  const contactRef2 = useRef(null);
+  const contactRef3 = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     //  Trigger animation for whole Contact section
     gsap.fromTo(
-      [contactRef1.current,contactRef2.current,contactRef3.current],
-      {  y: '10%',scale:0.8, opacity: 0 },
+      [contactRef1.current, contactRef2.current, contactRef3.current],
+      { y: "10%", scale: 0.8, opacity: 0 },
       {
-       
         y: 0,
         scale: 1,
         opacity: 1,
@@ -67,12 +47,28 @@ export default function Contact() {
     };
   }, []);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(null);
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    setLoading(false);
+    setSuccess(result.success);
+  };
+
   return (
     <section className="py-10 px-6 text-center" ref={containerRef}>
       <h2 className="text-center text-4xl font-bold mt-10 mb-10">CONTACT</h2>
       <p className="text-secondary text-xl mb-8" ref={contactRef1}>
-        Have a question or want to work together? Leave your details and I&apos;ll
-        get back to you as soon as possible.
+        Have a question or want to work together? Leave your details and
+        I&apos;ll get back to you as soon as possible.
       </p>
 
       <div className="flex justify-center" ref={contactRef2}>
@@ -116,8 +112,8 @@ export default function Contact() {
             name="name"
             placeholder="name"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            onChange={handleChange}
             value={formData.name}
+            onChange={handleChange}
             required
           />
           <input
@@ -125,8 +121,8 @@ export default function Contact() {
             name="email"
             placeholder="email"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            onChange={handleChange}
             value={formData.email}
+          onChange={handleChange}
             required
           />
           <textarea
@@ -134,32 +130,27 @@ export default function Contact() {
             placeholder="message"
             rows="4"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            onChange={handleChange}
             value={formData.message}
+          onChange={handleChange}
             required
           ></textarea>
 
           <div className="flex justify-end">
             <button
               type="submit"
+              disabled={loading}
               className="px-8 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary font-semibold rounded-sm shadow-md transition"
             >
-              Send
+               {loading ? "Sending..." : "Send"}
             </button>
-          </div>
-
-          {status === "loading" && (
-            <p className="text-blue-500 mt-3">Sending...</p>
-          )}
-          {status === "success" && (
-            <p className="text-green-500 mt-3">Message sent successfully!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-500 mt-3">
-              Something went wrong. Try again!
-            </p>
-          )}
+          </div>  
+          {success !== null && (
+        <p className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}>
+          {success ? "Message sent successfully!" : "Failed to send message."}
+        </p>
+      )}
         </form>
+      
       </div>
     </section>
   );
