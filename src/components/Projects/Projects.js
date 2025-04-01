@@ -19,7 +19,7 @@ import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
 const projectData = [
   {
-    time: "25 feb",
+    time: "2025 feb",
     items: [
       {
         name: "Watch Queue",
@@ -34,7 +34,7 @@ const projectData = [
     ],
   },
   {
-    time: "24 may",
+    time: "2024 may",
     items: [
       {
         name: "GPA Connect",

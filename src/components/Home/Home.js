@@ -12,7 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 
-const images = ["/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
+const images = ["/pics/pic1.jpg", "/pics/pic3.jpg"];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -85,7 +85,7 @@ export default function Home() {
       setTimeout(() => {
         setCurrentImage((prev) => (prev + 1) % images.length);
         setFade(true);
-      }, 200); // Delay before changing the image
+      });
     }, 15000);
 
     return () => clearInterval(interval);
