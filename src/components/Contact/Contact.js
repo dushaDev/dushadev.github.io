@@ -11,6 +11,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
+  const baseUrl = process.env.VERCEL_URL || "http://localhost:3000";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,7 +53,7 @@ export default function Contact() {
     setLoading(true);
     setSuccess(null);
 
-    const response = await fetch(`${process.env.VERCEL_URL}/api/send-email`, {
+    const response = await fetch(`${baseUrl}/api/send-email`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
