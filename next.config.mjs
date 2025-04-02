@@ -10,6 +10,7 @@ const nextConfig = {
     //     VERCEL_URL: process.env.VERCEL_URL || 'http://localhost:3000',
     //   },
     env: {
+        VERCEL_URL: process.env.VERCEL_URL || 'http://localhost:3000',
         RESEND_API_KEY: process.env.RESEND_API_KEY,
       },
     
