@@ -15,23 +15,23 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  //old headerItem file here. don't remove it
-  const headerItems = [
-    { name: 'Home', path: 'home',status:true },
-    { name: 'About', path: 'about',status:true },
-    { name: 'Skills', path: 'skills',status:false },
-    { name: 'Projects', path: 'projects',status:true },
-    { name: 'Contact', path: 'contact',status:true },
-  ];
-
-  // //new this headerItems used for also test.
-  // const headerItems = useMemo(() => [
+  // //old headerItem file here. don't remove it
+  // const headerItems = [
   //   { name: 'Home', path: 'home',status:true },
   //   { name: 'About', path: 'about',status:true },
   //   { name: 'Skills', path: 'skills',status:false },
   //   { name: 'Projects', path: 'projects',status:true },
   //   { name: 'Contact', path: 'contact',status:true },
-  // ], []); 
+  // ];
+
+  //new this headerItems used for also test.
+  const headerItems = useMemo(() => [
+    { name: 'Home', path: 'home',status:true },
+    { name: 'About', path: 'about',status:true },
+    { name: 'Skills', path: 'skills',status:false },
+    { name: 'Projects', path: 'projects',status:true },
+    { name: 'Contact', path: 'contact',status:true },
+  ], []); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
