@@ -24,11 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-  EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-  EMAIL_TO: ${{ secrets.EMAIL_TO }}
-  
 jobs:
   # Build job
   build:
