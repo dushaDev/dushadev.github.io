@@ -5,10 +5,10 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    env: {
-        // Fallback URL for local development
-        VERCEL_URL: process.env.VERCEL_URL || 'http://localhost:3000',
-      },
+    // env: {
+    //     // Fallback URL for local development
+    //     VERCEL_URL: process.env.VERCEL_URL || 'http://localhost:3000',
+    //   },
     
 };
 
