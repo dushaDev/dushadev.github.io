@@ -53,7 +53,7 @@ export default function Contact() {
     setLoading(true);
     setSuccess(null);
 
-    const response = await fetch(`${baseUrl}/api/send-email`, {
+    const response = await fetch(`dushadev-github-io.vercel.app/api/send-email`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
