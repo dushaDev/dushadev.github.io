@@ -9,7 +9,6 @@ const nextConfig = {
         // NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
         RESEND_API_KEY: process.env.RESEND_API_KEY,
       },
-    output: process.env.VERCEL_ENV === 'production' ? 'standalone' : undefined,
     
 };
 
