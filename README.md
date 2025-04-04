@@ -32,5 +32,14 @@ A modern contact form for your portfolio website with EmailJS integration, featu
 
 ```bash
 git clone https://github.com/yourusername/your-repo.git
+
 cd your-repo
+
 npm install
+
+```
+
+### 
+View Portfolio - https://dushadev.github.io/
+
+Happy Coding ! '_<
