@@ -23,13 +23,13 @@ const projectData = [
     items: [
       {
         name: "Watch Queue",
-        link: "https://www.linkedin.com/posts/dushan-beligala-360252196_flutter-mobiledevelopment-watchqueueapp-activity-7269761531381194752-oO0U?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+        link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-mobiledevelopment-watchqueueapp-activity-7269761531381194752-e8dT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
         techStack: [
           { name: "Flutter", icon: "/skills/flutter.png" },
         ],
         description:
           "Movies watchlist mobile app",
-        image: "https://media.licdn.com/dms/image/v2/D5622AQESgYXP_T4zuQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1733246192546?e=1746057600&v=beta&t=m79cZWfkrVWDyIbslWlwzcf6gUc01Sz17Vc1iStQKVo",
+        image: "https://media.licdn.com/dms/image/v2/D5622AQESgYXP_T4zuQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1733246192546?e=1746662400&v=beta&t=6dI1CAQWg0zSxNs674Fwwvhs0Rm5ZZlSfHhidBJNr3E",
       },
     ],
   },
@@ -38,13 +38,13 @@ const projectData = [
     items: [
       {
         name: "GPA Connect",
-        link: "https://www.linkedin.com/posts/dushan-beligala-360252196_python-mysql-bootstrap-activity-7159109776033947648-nqTG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+        link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_python-mysql-bootstrap-activity-7159109776033947648-Yhoa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
         techStack: [
           { name: "Python", icon: "/skills/python.png"},
         ],
         description:
           "GPA calculation web system",
-        image: "https://media.licdn.com/dms/image/v2/D5622AQEFPca6crIHCA/feedshare-shrink_1280/feedshare-shrink_1280/0/1706864751688?e=1746057600&v=beta&t=01u6WFQQt9pLXgWKLnr66g09N66HcH_IQxNfjMJEFRI",
+        image: "https://media.licdn.com/dms/image/v2/D5622AQFuuaT9q3AIgw/feedshare-shrink_1280/feedshare-shrink_1280/0/1706864778127?e=1746662400&v=beta&t=VERKmDYyvZ26F5hOvkJ2J6ZM4yvagAdjwQVDd3hdSng",
       },
     ],
   },
