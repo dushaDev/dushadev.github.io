@@ -23,7 +23,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-    
+
 jobs:
   # Build job
   build:
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-  
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -80,6 +80,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
+      - name: Build with EmailJS vars
+        run: |
+          echo "EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env.production
+          echo "EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env.production
+          echo "EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> .env.production
+          npm run build && npm run export
 
   # Deployment job
   deploy:

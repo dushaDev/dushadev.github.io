@@ -46,8 +46,8 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // From environment variables
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        process.env.EMAILJS_SERVICE_ID, // From environment variables
+        process.env.EMAILJS_TEMPLATE_ID,
         {
           email: formRef.current.email.value,
           name: formRef.current.name.value,
@@ -55,7 +55,7 @@ export default function Contact() {
           message: formRef.current.message.value,
           title: "New Contact Form Submission",
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.EMAILJS_PUBLIC_KEY
       );
 
       setSuccess(true);
