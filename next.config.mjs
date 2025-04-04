@@ -6,9 +6,10 @@ const nextConfig = {
         unoptimized: true,
     },
     env: {
-        // NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
-        RESEND_API_KEY: process.env.RESEND_API_KEY,
-      },
+        NEXT_PUBLIC_API_BASE: process.env.NODE_ENV === 'production' 
+          ? 'https://dushadev-github-io.vercel.app' 
+          : 'http://localhost:3000'
+      }
     
 };
 

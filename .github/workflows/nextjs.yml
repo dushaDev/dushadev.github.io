@@ -24,12 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
   
-env:
-  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-  EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-  EMAIL_TO: ${{ secrets.EMAIL_TO }}
-  NEXT_PUBLIC_VERCEL_URL: ${{ secrets.NEXT_PUBLIC_VERCEL_URL }}
-  
 jobs:
   # Build job
   build:
@@ -59,6 +53,15 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+        
+      - name: Build with environment variables
+        run: npm run build && npm run export
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          NEXT_PUBLIC_VERCEL_URL: https://dushadev-github-io.vercel.app
+  
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -97,3 +100,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
