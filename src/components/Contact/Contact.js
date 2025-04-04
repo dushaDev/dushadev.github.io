@@ -1,29 +1,22 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
-import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
-  // const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL || "http://localhost:3000";
+  const formRef = useRef(null);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
+  // Animation refs
   const contactRef1 = useRef(null);
   const contactRef2 = useRef(null);
   const contactRef3 = useRef(null);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    //  Trigger animation for whole Contact section
     gsap.fromTo(
       [contactRef1.current, contactRef2.current, contactRef3.current],
       { y: "10%", scale: 0.8, opacity: 0 },
@@ -43,9 +36,7 @@ export default function Contact() {
       }
     );
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   const handleSubmit = async (e) => {
@@ -53,18 +44,28 @@ export default function Contact() {
     setLoading(true);
     setSuccess(null);
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/send-email`, {
-    // const response = await fetch('https://dushadev-github-io.vercel.app/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // From environment variables
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          email: formRef.current.email.value,
+          name: formRef.current.name.value,
+          time: new Date().toLocaleString(),
+          message: formRef.current.message.value,
+          title: "New Contact Form Submission",
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
 
-    const result = await response.json();
-    setLoading(false);
-    setSuccess(result.success);
+      setSuccess(true);
+      formRef.current.reset();
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      setSuccess(false);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -110,14 +111,16 @@ export default function Contact() {
 
       <div className="max-w-md mx-auto" ref={contactRef3}>
         <h3 className="text-lg font-semibold mb-3">Send Message</h3>
-        <form className="flex flex-col space-y-3" onSubmit={handleSubmit}>
+        <form
+          ref={formRef}
+          className="flex flex-col space-y-3"
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             name="name"
             placeholder="name"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
           <input
@@ -125,8 +128,6 @@ export default function Contact() {
             name="email"
             placeholder="email"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            value={formData.email}
-          onChange={handleChange}
             required
           />
           <textarea
@@ -134,8 +135,6 @@ export default function Contact() {
             placeholder="message"
             rows="4"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            value={formData.message}
-          onChange={handleChange}
             required
           ></textarea>
 
@@ -145,16 +144,20 @@ export default function Contact() {
               disabled={loading}
               className="px-8 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary font-semibold rounded-sm shadow-md transition"
             >
-               {loading ? "Sending..." : "Send"}
+              {loading ? "Sending..." : "Send"}
             </button>
-          </div>  
+          </div>
+
           {success !== null && (
-        <p className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}>
-          {success ? "Message sent successfully!" : "Failed to send message."}
-        </p>
-      )}
+            <p
+              className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}
+            >
+              {success
+                ? "Message sent successfully!"
+                : "Failed to send message."}
+            </p>
+          )}
         </form>
-      
       </div>
     </section>
   );
