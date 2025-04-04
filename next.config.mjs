@@ -10,7 +10,6 @@ const nextConfig = {
           ? 'https://dushadev-github-io.vercel.app' 
           : 'http://localhost:3000'
       }
-    
 };
 
 export default nextConfig;
