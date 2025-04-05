@@ -89,11 +89,11 @@ export default function Contact() {
           <div className="flex items-center space-x-3">
             <FaLinkedin className="text-primary text-xl" />
             <a
-              href="https://www.linkedin.com/in/dushan-beligala-360252196/"
+              href="https://www.linkedin.com/in/dushan-madushanka-360252196"
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin.com/dushan-beligala
+              linkedin.com/dushan-madushanka
             </a>
           </div>
           <div className="flex items-center space-x-3">
