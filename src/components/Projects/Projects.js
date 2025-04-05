@@ -21,6 +21,21 @@ const projectData = [
     ],
   },
   {
+    time: "2024 nov",
+    items: [
+      {
+        name: "Medi Care",
+        link: "https://www.figma.com/design/mSOxN8wWpUgLVLJcWdd6dq/Pharmacy-MS---MediCare?node-id=187-105&t=fVQLMRvKv5z9AbYt-1",
+        techStack: [
+          { name: "Figma", icon: "/skills/figma.webp" },
+        ],
+        description:
+          "Mobile app UI design with Figma for pharmacy",
+        image: "/projects/pharmacy.jpg",
+      },
+    ],
+  },
+  {
     time: "2024 may",
     items: [
       {
