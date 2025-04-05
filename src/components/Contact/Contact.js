@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useRef, useEffect } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { gsap } from "gsap";
@@ -9,7 +10,6 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const formRef = useRef(null);
-
   // Animation refs
   const contactRef1 = useRef(null);
   const contactRef2 = useRef(null);
@@ -136,7 +136,8 @@ export default function Contact() {
             rows="4"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
-          ></textarea>
+            autoComplete="off"
+          />
 
           <div className="flex justify-end">
             <button
@@ -144,20 +145,15 @@ export default function Contact() {
               disabled={loading}
               className="px-8 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary font-semibold rounded-sm shadow-md transition"
             >
-              {loading ? "Sending..." : "Send"}
+              {loading ? "Sending.." : "Send"}
             </button>
           </div>
-
-          {success !== null && (
-            <p
-              className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}
-            >
-              {success
-                ? "Message sent successfully!"
-                : "Failed to send message."}
-            </p>
-          )}
         </form>
+        {success !== null && (
+          <p className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}>
+            {success ? "Message sent successfully!" : "Failed to send message."}
+          </p>
+        )}
       </div>
     </section>
   );

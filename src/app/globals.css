@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
 :root {
-
-  --primary: #FF7037;  
+  --primary: #ff7037;
   --background: #303030;
   --on-background: #353535;
   --secondary: #ffffff;
-  --neutral: #4C4C4C;
+  --neutral: #4c4c4c;
   --foreground: #ffffff;
 }
 
@@ -33,11 +32,11 @@ body {
   font-family: var(--font-inria-sans);
 }
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 .globalBackground {
-  background-image: url('/background/background.png');
+  background-image: url("/background/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -45,7 +44,3 @@ html {
   min-height: 100vh;
   width: 100%;
 }
-
-
-
-
