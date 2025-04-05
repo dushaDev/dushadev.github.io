@@ -23,14 +23,14 @@ export default function Footer() {
             <FaGithub />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/dushan-beligala-360252196/"
+            href="https://www.linkedin.com/in/dushan-madushanka-360252196"
             target="_blank"
             className="text-primary text-3xl hover:text-white transition-colors duration-200 ease-in-out"
           >
             <FaLinkedin />
           </Link>
           <Link
-            href="https://web.facebook.com/byDushan/"
+            href="https://web.facebook.com/byDushan"
             target="_blank"
             className="text-primary text-3xl hover:text-white transition-colors duration-200 ease-in-out"
           >

@@ -23,16 +23,16 @@ export default function Home() {
 
   useEffect(() => {
     //Loading animations
-    gsap.fromTo(
-      rightRef.current,
-      { opacity: 0 },
-      { duration: 1.5, opacity: 1 }
-    );
-    gsap.fromTo(
-      leftRef.current,
-      { x: "-100%", opacity: 0, scale: 0.8 },
-      { x: 0, duration: 1, opacity: 1, scale: 1, ease: "power3.out" }
-    );
+    // gsap.fromTo(
+    //   rightRef.current,
+    //   { opacity: 0 },
+    //   { duration: 1.5, opacity: 1 }
+    // );
+    // gsap.fromTo(
+    //   leftRef.current,
+    //   { x: "-100%", opacity: 0, scale: 0.8 },
+    //   { x: 0, duration: 1, opacity: 1, scale: 1, ease: "power3.out" }
+    // );
 
     // After animation for left element(Text)
     gsap.fromTo(
@@ -123,14 +123,14 @@ export default function Home() {
               <FaGithub />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/dushan-beligala-360252196/"
+              href="https://www.linkedin.com/in/dushan-madushanka-360252196"
               target="_blank"
               className="text-primary text-3xl hover:text-white  transition-colors duration-200 ease-in-out"
             >
               <FaLinkedin />
             </Link>
             <Link
-              href="https://web.facebook.com/byDushana/"
+              href="https://web.facebook.com/byDushana"
               target="_blank"
               className="text-primary text-3xl hover:text-white  transition-colors duration-200 ease-in-out"
             >
