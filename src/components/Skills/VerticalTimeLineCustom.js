@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+"use client";
+
 import Image from "next/image";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -17,7 +18,11 @@ export default function VerticalTimelineCustom({ icon, category, skills }) {
         padding: "0 0 0 30px",
       }}
       contentArrowStyle={{ borderRight: "8px solid var(--primary)" }}
-      iconStyle={{ background: "var(--primary)", color: "var(--secondary)", boxShadow: "none",}}
+      iconStyle={{
+        background: "var(--primary)",
+        color: "var(--secondary)",
+        boxShadow: "none",
+      }}
       icon={icon}
     >
       <div className="flex flex-col items-center justify-center">
@@ -26,7 +31,10 @@ export default function VerticalTimelineCustom({ icon, category, skills }) {
         </div>
         <div className="flex items-end justify-end gap-5">
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center  hover:scale-101 transition-transform duration-200">
+            <div
+              key={index}
+              className="flex flex-col items-center  hover:scale-101 transition-transform duration-200"
+            >
               <Image
                 src={skill.icon}
                 alt={skill.altText}
