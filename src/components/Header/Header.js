@@ -38,9 +38,11 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const topToBottom = useRef(null);
   //Animation for loading header
   useEffect(() => {
+    gsap.set(topToBottom.current, { y: -100, opacity: 0 });
     gsap.fromTo(
       topToBottom.current,
       { y: "-100%", opacity: 0 },
