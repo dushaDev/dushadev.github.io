@@ -22,34 +22,38 @@ export default function Home() {
   const containerRef = useRef(null);
 
   const textRef = useRef(null);
-  const phases = ["Welcome to my portfolio!", "Undergraduate in Software Engineering"];
+  const phases = [
+    "Welcome to my portfolio!",
+    "Undergraduate in Software Engineering",
+  ];
   useEffect(() => {
     let currentIndex = 0;
     if (!textRef.current) return;
 
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 
     function animate() {
-      
       for (phases.length; currentIndex < phases.length; ) {
-      
         const text = phases[currentIndex];
-    
-      tl.to(textRef.current, {
-        duration: 1.5,
-        text: text,
-        ease: "power1.Out"
-      }, "+=1") 
-      
 
-      .to({}, { duration: 1 })
-  
-      .to(textRef.current, {
-        duration: 1,
-        text: " ... ",
-        ease: "power1.Out",
-      });
-        currentIndex = currentIndex + 1
+        tl.to(
+          textRef.current,
+          {
+            duration: 1.5,
+            text: text,
+            ease: "power1.Out",
+          },
+          "+=1"
+        )
+
+          .to({}, { duration: 1 })
+
+          .to(textRef.current, {
+            duration: 1.5,
+            text: " ... ",
+            ease: "power1.Out",
+          });
+        currentIndex = currentIndex + 1;
       }
     }
 
@@ -71,8 +75,7 @@ export default function Home() {
     //   { x: 0, duration: 1, opacity: 1, scale: 1, ease: "power3.out" }
     // );
 
-    //replaces yourElement's text with "This is the new text" 
-
+    //replaces yourElement's text with "This is the new text"
 
     // After animation for left element(Text)
     gsap.fromTo(
@@ -142,7 +145,9 @@ export default function Home() {
           <h1 className="text-5xl font-semibold mt-2">
             I&apos;m <span className="text-primary">Dushan</span>
           </h1>
-          <p ref={textRef} className="text-4xl mt-3">...</p>
+          <p ref={textRef} className="text-4xl mt-3">
+            ...
+          </p>
 
           <a
             href="https://drive.google.com/file/d/1n--ewgHiY6CKVkJFCJv0YEMcbYIDVX6a/view?usp=sharing"
