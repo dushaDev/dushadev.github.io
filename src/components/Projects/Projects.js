@@ -7,6 +7,21 @@ import * as React from "react";
 import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
 const projectData = [
+
+  {
+    time: "2025 june",
+    items: [
+      {
+        name: "NSBM FindX",
+        link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_findx-flutterdev-firebase-activity-7333372453533949952-bDpc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+        techStack: [{ name: "Flutter", icon: "/skills/flutter.png" }],
+        description: "Lost and Found items tracking app with ML",
+        image:
+          "https://media.licdn.com/dms/image/v2/D5622AQElDrwmXbvsZg/feedshare-shrink_1280/B56ZcVfRaJGoAo-/0/1748412229843?e=1755129600&v=beta&t=8b8SPmxFVNjZv297yK-crgFtckS_9KZH9tM_CZax-9A",
+      },
+    ],
+  },
+
   {
     time: "2025 feb",
     items: [
