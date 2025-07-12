@@ -47,45 +47,79 @@ export default function About() {
       }
     );
 
-    // Animation for right element(Text)
-    //open
+     // Animation for right element(Text)
     gsap.fromTo(
       rightRef.current,
-      { x: "50%", y: "-10%", opacity: 0 },
+      { opacity: 0 },
       {
-        x: 0,
-        y: 0,
         opacity: 1,
         duration: 1,
         ease: "power3.in",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 100%",
+          start: "top 60%",
           end: "top 20%",
           scrub: 0.6,
           markers: false,
         },
       }
     );
-    //close
     gsap.fromTo(
       rightRef.current,
-      { x: 0, y: 0, opacity: 1 },
+      { opacity: 1 },
       {
-        x: "50%",
-        y: "10%",
         opacity: 0,
         duration: 1,
-        ease: "power3.in",
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 0%",
+          start: "bottom 80%",
           end: "bottom 30%",
           scrub: 0.6,
           markers: false,
         },
       }
     );
+
+    // // Animation for right element(Text)
+    // //open
+    // gsap.fromTo(
+    //   rightRef.current,
+    //   { x: "50%", y: "-10%", opacity: 0 },
+    //   {
+    //     x: 0,
+    //     y: 0,
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power3.in",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "top 100%",
+    //       end: "top 20%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
+    // //close
+    // gsap.fromTo(
+    //   rightRef.current,
+    //   { x: 0, y: 0, opacity: 1 },
+    //   {
+    //     x: "50%",
+    //     y: "10%",
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "power3.in",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "top 0%",
+    //       end: "bottom 30%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

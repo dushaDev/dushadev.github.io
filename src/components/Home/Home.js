@@ -78,19 +78,37 @@ export default function Home() {
     //replaces yourElement's text with "This is the new text"
 
     // After animation for left element(Text)
+    // gsap.fromTo(
+    //   leftRef.current,
+    //   { x: 0, y: 0, opacity: 1 },
+    //   {
+    //     x: "-30%",
+    //     y: "10%",
+    //     opacity: 0,
+    //     duration: 1,
+
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "bottom 90%",
+    //       end: "bottom 20%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
+
+        // After animation for left element(Text)
     gsap.fromTo(
       leftRef.current,
-      { x: 0, y: 0, opacity: 1 },
+      { opacity: 1 },
       {
-        x: "-30%",
-        y: "10%",
         opacity: 0,
         duration: 1,
-
+        ease: "power3.in",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "bottom 90%",
-          end: "bottom 20%",
+          end: "bottom 50%",
           scrub: 0.6,
           markers: false,
         },

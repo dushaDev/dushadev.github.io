@@ -7,8 +7,9 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Page() {
   return (
+    //globalBackground
     <>
-      <div className="globalBackground overflow-x-hidden">
+      <div className="overflow-x-hidden">
         <section id="home">
           <Home />
         </section>

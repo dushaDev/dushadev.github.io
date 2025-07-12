@@ -7,6 +7,21 @@ import * as React from "react";
 import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
 const projectData = [
+
+  {
+    time: "2025 june",
+    items: [
+      {
+        name: "NSBM FindX",
+        link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_findx-flutterdev-firebase-activity-7333372453533949952-bDpc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+        techStack: [{ name: "Flutter", icon: "/skills/flutter.png" }],
+        description: "Lost and Found items tracking app with ML",
+        image:
+          "https://media.licdn.com/dms/image/v2/D5622AQFh8gsDoXvPYg/feedshare-shrink_2048_1536/B56ZcVfRYzHUA0-/0/1748412223159?e=1755129600&v=beta&t=tWtbMb10X7Vb-enjsZ468oaVtC6qffXMpGxfAEFdiU0",
+      },
+    ],
+  },
+
   {
     time: "2025 feb",
     items: [
@@ -16,7 +31,7 @@ const projectData = [
         techStack: [{ name: "Flutter", icon: "/skills/flutter.png" }],
         description: "Movies watchlist mobile app",
         image:
-          "https://media.licdn.com/dms/image/v2/D5622AQESgYXP_T4zuQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1733246192546?e=1746662400&v=beta&t=6dI1CAQWg0zSxNs674Fwwvhs0Rm5ZZlSfHhidBJNr3E",
+          "https://media.licdn.com/dms/image/v2/D5622AQEP7ZbMS2w8AA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1733246177636?e=1755129600&v=beta&t=p2bxS1i3RiiLa2Ct0AU2Xnfq0OzRzcNDIicpUJa2rE0",
       },
     ],
   },
@@ -44,7 +59,7 @@ const projectData = [
         techStack: [{ name: "Python", icon: "/skills/python.png" }],
         description: "GPA calculation web system",
         image:
-          "https://media.licdn.com/dms/image/v2/D5622AQFuuaT9q3AIgw/feedshare-shrink_1280/feedshare-shrink_1280/0/1706864778127?e=1746662400&v=beta&t=VERKmDYyvZ26F5hOvkJ2J6ZM4yvagAdjwQVDd3hdSng",
+          "https://media.licdn.com/dms/image/v2/D5622AQFuuaT9q3AIgw/feedshare-shrink_1280/feedshare-shrink_1280/0/1706864778127?e=1755129600&v=beta&t=N9eLOBXKdPrCxXrkmk-mZqS5zsjH32trkWrzVLksA2o",
       },
     ],
   },
