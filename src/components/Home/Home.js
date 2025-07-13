@@ -203,7 +203,7 @@ export default function Home() {
         </div>
 
         <div
-          className="mt-10 md:mt-0 md:w-1/2 flex justify-center hover:scale-101 transition-transform duration-300 "
+          className="mt-10 md:mt-0 md:w-1/2 flex justify-center"
           ref={rightRef}
         > 
         {/* profile__image used to link custom css on global level for image radous */}

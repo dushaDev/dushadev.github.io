@@ -48,6 +48,12 @@ html {
 .profile__image {
   /*   border-top-left-radius: 1rem 4rem; */
   border-radius: 30% 70% 54% 46% / 30% 30% 70% 70%;
+  transition: border-radius 300ms ease-in-out;
+
+}
+.profile__image:hover {
+  /*   border-top-left-radius: 1rem 4rem; */
+  border-radius: 15% 85% 22% 78% / 72% 11% 89% 28%;
 
 }
 
