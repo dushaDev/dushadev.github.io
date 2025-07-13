@@ -12,7 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 
-const images = ["/pics/pic1.jpg", "/pics/pic3.jpg"];
+const images = ["/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -139,18 +139,18 @@ export default function Home() {
   }, []);
 
   //two Images changing animation here
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setFade(false);
 
-      setTimeout(() => {
-        setCurrentImage((prev) => (prev + 1) % images.length);
-        setFade(true);
-      });
-    }, 15000);
+  //     setTimeout(() => {
+  //       setCurrentImage((prev) => (prev + 1) % images.length);
+  //       setFade(true);
+  //     });
+  //   }, 15000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section
@@ -205,10 +205,11 @@ export default function Home() {
         <div
           className="mt-10 md:mt-0 md:w-1/2 flex justify-center hover:scale-101 transition-transform duration-300 "
           ref={rightRef}
-        >
-          <div className="w-44 h-44 md:w-72 md:h-72 border-4 border-primary rounded-full overflow-hidden">
+        > 
+        {/* profile__image used to link custom css on global level for image radous */}
+          <div className="w-44 h-44 md:w-92 md:h-92 border-2 border-primary profile__image overflow-hidden">
             <Image
-              src={images[currentImage]}
+              src={images[1]}
               alt="Dushan"
               width={280}
               height={280}
