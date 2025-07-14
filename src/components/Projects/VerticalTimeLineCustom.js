@@ -37,9 +37,9 @@ export default function VerticalTimelineCustom({ time, items }) {
           >
             <div
               key={index}
-              className=" bg-on-background border-4 border-primary rounded-sm shadow-lg max-w-70  hover:scale-101 transition-transform duration-300"
+              className=" bg-on-background border-2 border-primary about__image rounded-sm overflow-hidden shadow-lg max-w-70  hover:scale-101 transition-transform duration-300"
             >
-              <div className="relative rounded- overflow-hidden">
+              <div className="relative rounded">
                 <Image
                   src={item.image}
                   alt={item.name}

@@ -1,6 +1,7 @@
 "use client";
 
 import { gsap } from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
@@ -13,6 +14,27 @@ import "react-vertical-timeline-component/style.min.css";
 import * as React from "react";
 import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
+const skills = [
+  { name: "Flutter", altText: "flutter", icon: "/skills/flutter.png" },
+  { name: "React", altText: "react", icon: "/skills/react.webp" },
+  { name: "Java", altText: "java", icon: "/skills/java.webp" },
+  { name: "PHP", altText: "php", icon: "/skills/php.webp" },
+  { name: "Dart", altText: "dart", icon: "/skills/dart.png" },
+  { name: "Python", altText: "python", icon: "/skills/python.png" },
+  { name: "SQL", altText: "sql", icon: "/skills/sql.webp" },
+  {
+    name: "Android Native",
+    altText: "android",
+    icon: "/skills/android.png",
+  },
+  { name: "Figma", altText: "Figma", icon: "/skills/figma.webp" },
+  { name: "Adobe XD", altText: "Adobe XD", icon: "/skills/xd.png" },
+  {
+    name: "Adobe Illustrator",
+    altText: "Adobe Illustrator",
+    icon: "/skills/ai.png",
+  },
+]
 const skillsData = [
   {
     icon: <AiOutlineAntDesign width={20} height={20} />,
@@ -94,7 +116,25 @@ export default function Skills() {
           className="container mx-auto flex flex-col md:flex-row items-center"
           ref={skillRef}
         >
-          <VerticalTimeline>
+
+            <div className="flex items-end justify-end gap-5">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center  hover:scale-101 transition-transform duration-200"
+                >
+                  <Image
+                    src={skill.icon}
+                    alt={skill.altText}
+                    width={60}
+                    height={60}
+                  />
+                  <p className="mt-2">{skill.name}</p>
+                </div>
+              ))}
+            </div>
+
+          {/* <VerticalTimeline>
             {skillsData.map((section, index) => (
               <VerticalTimelineCustom
                 key={index}
@@ -103,7 +143,7 @@ export default function Skills() {
                 skills={section.skills}
               />
             ))}
-          </VerticalTimeline>
+          </VerticalTimeline> */}
         </div>
       </div>
     </section>
