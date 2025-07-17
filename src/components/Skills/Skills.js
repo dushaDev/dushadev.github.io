@@ -1,7 +1,11 @@
 "use client";
 
+import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase  , FaAndroid, FaFigma, FaBootstrap   } from "react-icons/fa";
+import { FaFlutter } from "react-icons/fa6";
+import { SiAdobeillustrator, SiAdobexd } from "react-icons/si";
+
+
 import { gsap } from "gsap";
-import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
@@ -10,29 +14,29 @@ import { IoIosApps } from "react-icons/io";
 gsap.registerPlugin(ScrollTrigger);
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 import * as React from "react";
 import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
 const skills = [
-  { name: "Flutter", altText: "flutter", icon: "/skills/flutter.png" },
-  { name: "React", altText: "react", icon: "/skills/react.webp" },
-  { name: "Java", altText: "java", icon: "/skills/java.webp" },
-  { name: "PHP", altText: "php", icon: "/skills/php.webp" },
-  { name: "Dart", altText: "dart", icon: "/skills/dart.png" },
-  { name: "Python", altText: "python", icon: "/skills/python.png" },
-  { name: "SQL", altText: "sql", icon: "/skills/sql.webp" },
+  { name: "Flutter", altText: "flutter", icon: FaFlutter},
+  { name: "React", altText: "react", icon: FaReact },
+  { name: "Bootstrap", altText: "bootstrap", icon: FaBootstrap },
+  { name: "Java", altText: "java", icon: FaJava },
+  { name: "GitHub", altText: "github", icon: FaGithub },
+  { name: "PHP", altText: "php", icon: FaPhp },
+  { name: "Python", altText: "python", icon: FaPython },
+  { name: "SQL", altText: "sql", icon: FaDatabase },
   {
-    name: "Android Native",
+    name: "Android",
     altText: "android",
-    icon: "/skills/android.png",
+    icon: FaAndroid,
   },
-  { name: "Figma", altText: "Figma", icon: "/skills/figma.webp" },
-  { name: "Adobe XD", altText: "Adobe XD", icon: "/skills/xd.png" },
+  { name: "Figma", altText: "Figma", icon: FaFigma},
+  { name: "XD", altText: "Adobe XD", icon: SiAdobexd },
   {
-    name: "Adobe Illustrator",
+    name: "Illustrator",
     altText: "Adobe Illustrator",
-    icon: "/skills/ai.png",
+    icon: SiAdobeillustrator,
   },
 ]
 const skillsData = [
@@ -113,26 +117,18 @@ export default function Skills() {
         <h2 className="text-center text-4xl font-bold my-10">SKILLS</h2>
 
         <div
-          className="container mx-auto flex flex-col md:flex-row items-center"
+          className="justify-center grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:grid-cols-3 gap-10"
           ref={skillRef}
         >
-
-            <div className="flex items-end justify-end gap-5">
-              {skills.map((skill, index) => (
+              {skills.map((Skill, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center  hover:scale-101 transition-transform duration-200"
+                  className="flex flex-col items-center transition-transform duration-200"
                 >
-                  <Image
-                    src={skill.icon}
-                    alt={skill.altText}
-                    width={60}
-                    height={60}
-                  />
-                  <p className="mt-2">{skill.name}</p>
+                  <Skill.icon key={index} size={46} className="text-secondary hover:text-primary duration-200"/>
+                  <p className="mt-2">{Skill.name}</p>
                 </div>
               ))}
-            </div>
 
           {/* <VerticalTimeline>
             {skillsData.map((section, index) => (
