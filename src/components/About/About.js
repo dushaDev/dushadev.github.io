@@ -47,7 +47,7 @@ export default function About() {
       }
     );
 
-     // Animation for right element(Text)
+    // Animation for right element(Text)
     gsap.fromTo(
       rightRef.current,
       { opacity: 0 },
