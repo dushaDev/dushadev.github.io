@@ -48,11 +48,17 @@ html {
 .profile__image {
   /*   border-top-left-radius: 1rem 4rem; */
   border-radius: 30% 70% 54% 46% / 30% 30% 70% 70%;
+  transition: border-radius 300ms ease-in-out;
+
+}
+.profile__image:hover {
+  /*   border-top-left-radius: 1rem 4rem; */
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
 
 }
 
 .about__image {
   /*   border-top-left-radius: 1rem 4rem; */
-  border-radius: 5% 95% 8% 92% / 91% 7% 93% 9% ;
+  border-radius: 3% 97% 4% 96% / 97% 4% 96% 3%;
 
 }

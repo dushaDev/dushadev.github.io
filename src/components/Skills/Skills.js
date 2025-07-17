@@ -1,5 +1,10 @@
 "use client";
 
+import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase, FaAndroid, FaFigma, FaBootstrap } from "react-icons/fa";
+import { FaFlutter } from "react-icons/fa6";
+import { SiAdobeillustrator, SiAdobexd } from "react-icons/si";
+
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -9,10 +14,31 @@ import { IoIosApps } from "react-icons/io";
 gsap.registerPlugin(ScrollTrigger);
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 import * as React from "react";
 import VerticalTimelineCustom from "./VerticalTimeLineCustom";
 
+const skills = [
+  { name: "Flutter", altText: "flutter", icon: FaFlutter },
+  { name: "React", altText: "react", icon: FaReact },
+  { name: "Bootstrap", altText: "bootstrap", icon: FaBootstrap },
+  { name: "Java", altText: "java", icon: FaJava },
+  { name: "GitHub", altText: "github", icon: FaGithub },
+  { name: "PHP", altText: "php", icon: FaPhp },
+  { name: "Python", altText: "python", icon: FaPython },
+  { name: "SQL", altText: "sql", icon: FaDatabase },
+  {
+    name: "Android",
+    altText: "android",
+    icon: FaAndroid,
+  },
+  { name: "Figma", altText: "Figma", icon: FaFigma },
+  { name: "XD", altText: "Adobe XD", icon: SiAdobexd },
+  {
+    name: "Illustrator",
+    altText: "Adobe Illustrator",
+    icon: SiAdobeillustrator,
+  },
+]
 const skillsData = [
   {
     icon: <AiOutlineAntDesign width={20} height={20} />,
@@ -84,17 +110,27 @@ export default function Skills() {
 
   return (
     <section
-      className="relative flex items-center justify-center h-screen text-white md:px-20 lg:px-20 my-10"
+      className="relative flex items-center justify-center h-screen text-white md:px-20 lg:px-20"
       ref={containerRef}
     >
       <div className="container mx-auto px-6 flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold my-10">SKILLS</h2>
+        <h2 className="text-center text-4xl font-bold mb-16">SKILLS</h2>
 
         <div
-          className="container mx-auto flex flex-col md:flex-row items-center"
+          className="justify-center grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:grid-cols-3 gap-10"
           ref={skillRef}
         >
-          <VerticalTimeline>
+          {skills.map((Skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center transition-transform duration-200"
+            >
+              <Skill.icon key={index} size={46} className="text-secondary hover:text-primary duration-200" />
+              <p className="mt-2">{Skill.name}</p>
+            </div>
+          ))}
+
+          {/* <VerticalTimeline>
             {skillsData.map((section, index) => (
               <VerticalTimelineCustom
                 key={index}
@@ -103,7 +139,7 @@ export default function Skills() {
                 skills={section.skills}
               />
             ))}
-          </VerticalTimeline>
+          </VerticalTimeline> */}
         </div>
       </div>
     </section>
