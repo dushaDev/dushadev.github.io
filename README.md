@@ -1,45 +1,47 @@
-# Portfolio Contact Form with EmailJS Integration
+# My Portfolio
 
-![Project Screenshot](./screenshot.png) <!-- Add your screenshot if available -->
-
-A modern contact form for your portfolio website with EmailJS integration, featuring smooth animations and responsive design.
+This is my personal portfolio website built with React and Tailwind CSS. It showcases my skills, projects, and provides a way to contact me.
 
 ## Features
 
-- 📧 **EmailJS integration** - Send emails directly from client-side
-- ✨ **GSAP animations** - Smooth scroll-triggered animations
-- 📱 **Fully responsive** - Works on all device sizes
-- 🎨 **Customizable design** - Using Tailwind CSS
-- 🔒 **Secure** - No backend server required
+- **Responsive Design:** The portfolio is fully responsive and works on all devices.
+- **Project Showcase:** A dedicated section to showcase my projects with descriptions and links.
+- **Skills Section:** A section to list my technical skills.
+- **Contact Form:** A functional contact form using EmailJS to send emails directly from the website.
+- **Smooth Animations:** GSAP is used for smooth animations and transitions.
 
 ## Technologies Used
 
-- ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
-- ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-- ![EmailJS](https://img.shields.io/badge/EmailJS-FF7037?logo=maildotru&logoColor=white)
-- ![GSAP](https://img.shields.io/badge/GSAP-88CE02?logo=greensock&logoColor=white)
-- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+- Next.js
+- React
+- Tailwind CSS
+- EmailJS
+- GSAP
+
+## Live Demo
+
+You can view the live portfolio here: [https://dushadev.github.io/](https://dushadev.github.io/)
 
 ## Setup Instructions
 
-### 1. Prerequisites
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/your-repo.git
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-repo
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-- Node.js (v16 or later)
-- npm or yarn
-- EmailJS account (free tier available)
+## Acknowledgements
 
-### 2. Installation
-
-```bash
-git clone https://github.com/yourusername/your-repo.git
-
-cd your-repo
-
-npm install
-
-```
-
-### 
-View Portfolio - https://dushadev.github.io/
-
-Happy Coding ! '_<
+- This project was inspired by various online portfolios and tutorials.
+- Thanks to the creators of the libraries and frameworks used in this project.
