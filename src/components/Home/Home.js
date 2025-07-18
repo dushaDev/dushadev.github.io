@@ -12,7 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 
-const images = ["/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
+const images = ["/pics/pic0.png","/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -209,10 +209,10 @@ export default function Home() {
         {/* profile__image used to link custom css on global level for image radous */}
           <div className="w-44 h-44 md:w-92 md:h-92 border-2 border-primary profile__image overflow-hidden">
             <Image
-              src={images[1]}
+              src={images[0]}
               alt="Dushan"
-              width={280}
-              height={280}
+              width={350}
+              height={350}
               key={currentImage}
               className={` object-cover w-full h-full transition-opacity duration-1000 ease-in-out ${
                 fade ? "opacity-100" : "opacity-0"
