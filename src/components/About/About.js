@@ -139,11 +139,11 @@ export default function About() {
             className="w-full md:w-1/3 flex justify-center md:justify-start hover:scale-101 transition-transform duration-300"
             ref={leftRef}
           >
-            <div className="w-70 h-70 rounded-sm overflow-hidden border-2 border-primary shadow-lg">
+            <div className="w-70 h-70 rounded-lg overflow-hidden border-2 about__image border-primary shadow-lg">
               <Image
                 src="/pics/pic1.jpg"
                 alt="Dushan"
-                width={320}
+                width={256}
                 height={320}
                 className="object-cover w-full h-full"
               />
