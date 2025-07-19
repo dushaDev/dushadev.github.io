@@ -12,7 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 
-const images = ["/pics/pic0.png","/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
+const images = ["/pics/pic0.webp","/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -160,10 +160,10 @@ export default function Home() {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
         <div className="text-center md:text-left md:w-1/2 " ref={leftRef}>
           <h2 className="text-4xl font-light">Hey,</h2>
-          <h1 className="text-5xl font-semibold mt-2">
+          <h1 className="text-4xl lg:text-5xl font-semibold mt-2">
             I&apos;m <span className="text-primary">Dushan</span>
           </h1>
-          <p ref={textRef} className=" mt-3 lg:text-4xl sm:text-3xl">
+          <p ref={textRef} className=" mt-3 text-xl lg:text-4xl">
             ...
           </p>
 
@@ -207,7 +207,7 @@ export default function Home() {
           ref={rightRef}
         > 
         {/* profile__image used to link custom css on global level for image radous */}
-          <div className="w-44 h-44 md:w-92 md:h-92 border-2 border-primary profile__image overflow-hidden">
+          <div className="w-52 h-52 md:w-120 md:h-120 border-2 rounded-full border-primary overflow-hidden">
             <Image
               src={images[0]}
               alt="Dushan"
