@@ -9,7 +9,7 @@ export default function Page() {
   return (
     //globalBackground
     <>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden grid grid-cols-1 gap-10">
         <section id="home">
           <Home />
         </section>

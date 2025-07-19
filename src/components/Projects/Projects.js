@@ -88,7 +88,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center h-screen md:px-20 lg:px-20 " ref={containerRef}>
+    <section className="relative flex items-center justify-center lg:h-screen md:px-20 lg:px-20 " ref={containerRef}>
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-center text-4xl font-bold mb-16">PROJECTS</h2>
 

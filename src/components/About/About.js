@@ -8,78 +8,100 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
+  const aboutRef = useRef(null);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Animation for left element(Image)
-    gsap.fromTo(
-      leftRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        ease: "power3.in",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 60%",
-          end: "top 20%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      leftRef.current,
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom 80%",
-          end: "bottom 30%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
 
-    // Animation for right element(Text)
-    gsap.fromTo(
-      rightRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        ease: "power3.in",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 60%",
-          end: "top 20%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
-    gsap.fromTo(
-      rightRef.current,
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom 80%",
-          end: "bottom 30%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
+        // Animation for left element
+        gsap.fromTo(
+          aboutRef.current,
+          { y: "5%", scale: 0.8, opacity: 0 },
+          {
+            y: 0,
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 70%",
+              end: "top 20%",
+              scrub: 0.6,
+              markers: false,
+            },
+          }
+        );
+    
+        return () => {
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    // // Animation for left element(Image)
+    // gsap.fromTo(
+    //   leftRef.current,
+    //   { opacity: 0 },
+    //   {
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power3.in",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "top 60%",
+    //       end: "top 20%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   leftRef.current,
+    //   { opacity: 1 },
+    //   {
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "power3.out",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "bottom 80%",
+    //       end: "bottom 30%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
+
+    // // Animation for right element(Text)
+    // gsap.fromTo(
+    //   rightRef.current,
+    //   { opacity: 0 },
+    //   {
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power3.in",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "top 60%",
+    //       end: "top 20%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
+    // gsap.fromTo(
+    //   rightRef.current,
+    //   { opacity: 1 },
+    //   {
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "power3.out",
+    //     scrollTrigger: {
+    //       trigger: containerRef.current,
+    //       start: "bottom 80%",
+    //       end: "bottom 30%",
+    //       scrub: 0.6,
+    //       markers: false,
+    //     },
+    //   }
+    // );
 
     // // Animation for right element(Text)
     // //open
@@ -133,11 +155,11 @@ export default function About() {
     >
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-center text-4xl font-bold mb-10">ABOUT</h2>
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center"ref={aboutRef}>
           {/* Image Section */}
           <div
             className="w-full md:w-1/3 flex justify-center md:justify-start hover:scale-101 transition-transform duration-300"
-            ref={leftRef}
+          
           >
             <div className="w-70 h-70 rounded-sm overflow-hidden border-2 border-primary shadow-lg">
               <Image
@@ -153,7 +175,6 @@ export default function About() {
           {/* Text Section */}
           <div
             className="w-full md:w-2/3 text-center md:text-left mt-10 mb-10 md:mt-0 md:ml-10 "
-            ref={rightRef}
           >
             <p className="text-3xl font-semibold mt-4">Hey</p>
             <p className="text-xl mt-2">

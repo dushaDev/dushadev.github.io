@@ -163,7 +163,7 @@ export default function Home() {
           <h1 className="text-5xl font-semibold mt-2">
             I&apos;m <span className="text-primary">Dushan</span>
           </h1>
-          <p ref={textRef} className="text-4xl mt-3">
+          <p ref={textRef} className=" mt-3 lg:text-4xl sm:text-3xl">
             ...
           </p>
 
