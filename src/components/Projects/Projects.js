@@ -67,7 +67,7 @@ const projectData = [
 
 export default function Projects() {
   return (
-    <section className="relative flex items-center justify-center md:px-20 lg:px-20 ">
+    <section className="relative flex items-center justify-center lg:h-screen md:px-20 lg:px-20 " ref={containerRef}>
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-center text-4xl font-bold mb-10 mt-20">PROJECTS</h2>
 
