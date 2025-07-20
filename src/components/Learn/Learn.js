@@ -16,6 +16,8 @@ import Item from "./Item";
 const projectData = [
 
   {
+    type: 'post',
+    tags: ['firebase', 'google',],
     time: "July 11 2025",
     name: "What is Firebase?",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7349484314755047428/",
@@ -25,6 +27,8 @@ const projectData = [
   },
 
   {
+    type: 'post',
+    tags: ['space',],
     time: "July 07 2025",
     name: "My Selfie just came back from Space!",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7347924111509082112/",
@@ -33,7 +37,9 @@ const projectData = [
       "https://media.licdn.com/dms/image/v2/D5622AQFabtra6BMLcA/feedshare-shrink_2048_1536/B56ZfkSBL6G0Ao-/0/1751881624290?e=1755734400&v=beta&t=EWq_Su6fF7N6k-_j5Od1h_olgWe6L7WI63wGlc99-lg"
   },
 
-    {
+  {
+    type: 'post',
+    tags: ['git', 'github',],
     time: "June 11 2025",
     name: "Ever wondered how 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 𝗰𝗼𝗻𝘁𝗿𝗼𝗹 really works?",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_git-github-versioncontrol-activity-7338524455758897152-w9bA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
@@ -42,7 +48,9 @@ const projectData = [
       "https://media.licdn.com/dms/image/v2/D5622AQGV17I0ag8NEg/feedshare-shrink_2048_1536/B56ZdetGVqGQAo-/0/1749640572551?e=1755734400&v=beta&t=lbPWeFiXUv7AO57v3fZfOcGagNJcBsn1UmwF2AkHdbg"
   },
 
-      {
+  {
+    type: 'post',
+    tags: ['dart', 'flutter','sinhala'],
     time: "June 02 2025",
     name: "Let's talk about Null Safety",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-flutter-activity-7335145654396100609-80L_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
@@ -50,7 +58,9 @@ const projectData = [
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQHUwx3VYLH72w/feedshare-shrink_1280/B56ZctQZhWGsAs-/0/1748810963786?e=1755734400&v=beta&t=TdNfWUDomByBgwegtAEn0XOl7hAc4RlN3OPSLGth-iw"
   },
-        {
+  {
+    type: 'post',
+    tags: ['dart', 'flutter','sinhala'],
     time: "May 30 2025",
     name: "මොකක්ද 𝗔𝗿𝗿𝗼𝘄 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 එකක් කියන්නෙ?",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-basics-activity-7334058477494906882-LT_f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
@@ -58,7 +68,9 @@ const projectData = [
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQEXGN036j0oXA/feedshare-shrink_1280/B56Zcd142BGQAk-/0/1748552357244?e=1755734400&v=beta&t=FkHlEYeynOFtmRvCySTJWU4WhHLPC8nPh9ymRxOIoOM"
   },
-        {
+  {
+    type: 'post',
+    tags: ['dart', 'flutter','sinhala'],
     time: "May 29 2025",
     name: "මොකක්ද 𝗦𝘁𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝗽𝗼𝗹𝗮𝘁𝗶𝗼𝗻 කියන්නෙ?",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-sinhalen-activity-7333696108864393217-_2CI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
@@ -66,7 +78,16 @@ const projectData = [
     image:
       "https://media.licdn.com/dms/image/v2/D5622AQERiq00AEsS2Q/feedshare-shrink_1280/B56ZcYj7SCHUAk-/0/1748463761850?e=1755734400&v=beta&t=0ZnmPU3x0SNXnspTTi3tgWlFT791_4DRetGP6G3KZsE"
   },
-
+  {
+    type: 'button',
+    time: "-",
+    name: "-",
+    link: "https://www.linkedin.com/in/dushan-madushanka-360252196/recent-activity/all/",
+    description: "-",
+    image:
+      "-"
+  },
+  // this is type 'button' to show a button at the end of the posts list 
 
 ];
 
@@ -99,7 +120,7 @@ export default function Learn() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center lg:h-screen mt-10 md:px-20 lg:px-20 " ref={containerRef}>
+    <section className="relative flex items-center justify-center lg:h-screen mt-10 mb-20 md:px-20 lg:px-20 " ref={containerRef}>
       <div className="container mx-auto px-6 flex flex-col items-center">
         <h2 className="text-center text-4xl font-bold mb-16">LEARN</h2>
 

@@ -69,7 +69,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-10 px-6 text-center h-screen" ref={containerRef}>
+    <section className="px-6 text-center h-screen" ref={containerRef}>
       <h2 className="text-center text-4xl font-bold mt-10 mb-10">CONTACT</h2>
       <p className="text-secondary text-xl mb-8" ref={contactRef1}>
         Have a question or want to work together? Leave your details and
