@@ -1,8 +1,8 @@
 "use client";
 
 import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase, FaAndroid, FaFigma, FaBootstrap } from "react-icons/fa";
-import { FaFlutter } from "react-icons/fa6";
-import { SiAdobeillustrator, SiAdobexd } from "react-icons/si";
+import { FaFlutter, FaGitAlt } from "react-icons/fa6";
+import { SiAdobeillustrator, SiAdobexd, SiAdobephotoshop, SiFirebase } from "react-icons/si";
 
 
 import { gsap } from "gsap";
@@ -22,10 +22,11 @@ const skills = [
   { name: "React", altText: "react", icon: FaReact },
   { name: "Bootstrap", altText: "bootstrap", icon: FaBootstrap },
   { name: "Java", altText: "java", icon: FaJava },
-  { name: "GitHub", altText: "github", icon: FaGithub },
+  { name: "Git", altText: "git", icon: FaGitAlt },
   { name: "PHP", altText: "php", icon: FaPhp },
   { name: "Python", altText: "python", icon: FaPython },
   { name: "SQL", altText: "sql", icon: FaDatabase },
+  { name: "Firebase", altText: "firebase", icon: SiFirebase },
   {
     name: "Android",
     altText: "android",
@@ -33,6 +34,7 @@ const skills = [
   },
   { name: "Figma", altText: "Figma", icon: FaFigma },
   { name: "XD", altText: "Adobe XD", icon: SiAdobexd },
+  { name: "Photoshop", altText: "Photoshop", icon: SiAdobephotoshop },
   {
     name: "Illustrator",
     altText: "Adobe Illustrator",
