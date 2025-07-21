@@ -42,10 +42,21 @@ export default function Project({ project }) {
         </div>
       </Link>
       <div className="p-4">
+       
+          <div className="flex flex-wrap gap-1 mb-1">
+        {project.tags && project.tags.map((tag, index) => (
+          <span
+            key={index}
+            className="bg-primary text-white text-xs px-2 rounded-sm"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
         <h3 className="text-xl font-semibold text-white mb-2">
           {project.name}
         </h3>
-        <p className="text-gray-300 text-sm leading-relaxed overflow-hidden text-ellipsis h-10">
+        <p className="text-gray-300 text-sm leading-relaxed overflow-hidden text-ellipsis h-16 line-clamp-2">
           {project.description}
         </p>
         {/* Tech Stack Icons */}
