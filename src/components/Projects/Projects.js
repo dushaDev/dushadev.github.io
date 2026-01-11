@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 
 import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase, FaAndroid, FaFigma, FaBootstrap, FaFlask, } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
-import { SiAdobeillustrator, SiAdobexd, SiFirebase, SiFlask} from "react-icons/si";
+import { SiAdobeillustrator, SiAdobexd, SiFirebase, SiFlask } from "react-icons/si";
 import { RiGeminiFill } from "react-icons/ri";
 import { AiFillOpenAI } from "react-icons/ai";
 
@@ -24,10 +24,9 @@ const projectData = [
     tags: ['mobile',],
     name: "NSBM FindX",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_findx-flutterdev-firebase-activity-7333372453533949952-bDpc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    techStack: [{ name: "Flutter", icon: FaFlutter },{ name: "Gemini Vision", icon: RiGeminiFill },{ name: "Firebase", icon: SiFirebase }],
+    techStack: [{ name: "Flutter", icon: FaFlutter }, { name: "Gemini Vision", icon: RiGeminiFill }, { name: "Firebase", icon: SiFirebase }],
     description: "Navigating lost and found items on a busy campus can be challenging. FindX simplifies this process by providing a centralized, intelligent platform to report, browse, and ultimately, recover lost belongings.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQFh8gsDoXvPYg/feedshare-shrink_2048_1536/B56ZcVfRYzHUA0-/0/1748412223159?e=1755129600&v=beta&t=tWtbMb10X7Vb-enjsZ468oaVtC6qffXMpGxfAEFdiU0",
+    image: "/projects/1748412229843.jpeg"
   },
 
   {
@@ -35,11 +34,10 @@ const projectData = [
     name: "Watch Queue",
     tags: ['mobile'],
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-mobiledevelopment-watchqueueapp-activity-7269761531381194752-e8dT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    techStack: [{ name: "Flutter", icon: FaFlutter}, { name: "Firebase", icon: SiFirebase }],
+    techStack: [{ name: "Flutter", icon: FaFlutter }, { name: "Firebase", icon: SiFirebase }],
     description: "This is my latest project 'Watch Queue' Movies watchlist Mobile App with Flutter! This app is a great way to explore Flutter and improve my skills in mobile development.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQEP7ZbMS2w8AA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1733246177636?e=1755129600&v=beta&t=p2bxS1i3RiiLa2Ct0AU2Xnfq0OzRzcNDIicpUJa2rE0",
-
+      "/projects/1733246194093.jpeg",
   },
   {
     time: "2024 nov",
@@ -58,18 +56,18 @@ const projectData = [
     tags: ['web'],
     name: "GPA Connect",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_python-mysql-bootstrap-activity-7159109776033947648-Yhoa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    techStack: [{ name: "Python", icon: FaPython},{ name: "Flask", icon: SiFlask },{name:"chatgpt", icon: AiFillOpenAI}],
+    techStack: [{ name: "Python", icon: FaPython }, { name: "Flask", icon: SiFlask }, { name: "chatgpt", icon: AiFillOpenAI }],
     description: "Collaborated on 'GPA connect' GPA Calculation web system Project with Python programming language based on Flask framework",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQFuuaT9q3AIgw/feedshare-shrink_1280/feedshare-shrink_1280/0/1706864778127?e=1755129600&v=beta&t=N9eLOBXKdPrCxXrkmk-mZqS5zsjH32trkWrzVLksA2o",
+      "/projects/1706864751688.jpeg",
   },
-   
+
 ];
 
 export default function Projects() {
-    const projRef = useRef(null);
+  const projRef = useRef(null);
   const containerRef = useRef(null);
-    useEffect(() => {
+  useEffect(() => {
     // Animation for left element
     gsap.fromTo(
       projRef.current,
@@ -100,15 +98,15 @@ export default function Projects() {
         <h2 className="text-center text-4xl font-bold mb-16">PROJECTS</h2>
 
 
-<div className="flex flex-wrap justify-center gap-6"  ref={projRef}>
-  {projectData.map((project, index) => (
-          <Project
-            key={index}
-            project={project}
-          />
-        ))}
-</div>
-        
+        <div className="flex flex-wrap justify-center gap-6" ref={projRef}>
+          {projectData.map((project, index) => (
+            <Project
+              key={index}
+              project={project}
+            />
+          ))}
+        </div>
+
 
       </div>
     </section>

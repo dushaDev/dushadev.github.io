@@ -17,67 +17,81 @@ const projectData = [
 
   {
     type: 'post',
+    tags: ['Flutter', 'Dart', 'dev',],
+    time: "January 11 2026",
+    name: "Dart 3.10 is here, and your UI code is about to get much cleaner",
+    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-dart-softwareengineering-activity-7415984863557640192-rcuE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    description: "The latest release of 𝗗𝗮𝗿𝘁 3.10 introduces 𝗗𝗼𝘁 𝗦𝗵𝗼𝗿𝘁𝗵𝗮𝗻𝗱𝘀 (Static Namespace Shorthands). This feature allows you to omit the class or enum name when the type can be inferred from the context.",
+    image:
+      "/learn/1768108572405.jpeg"
+  },
+
+  {
+    type: 'post',
+    tags: ['flutter', 'dart', 'dev',],
+    time: "December 27 2025",
+    name: "My first Flutter package is live on pub.dev",
+    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-opensource-coding-activity-7410632161319645184-Dsw1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    description: "I built a small utility called 𝗚𝗿𝗲𝗲𝘁𝗶𝗳𝘆. It handles time-aware greetings (like \"Good Morning\") with support for randomization and custom message lists.",
+    image:
+      "/learn/1766832388505.jpeg"
+  },
+
+  {
+    type: 'post',
+    tags: ['UI', 'UX',],
+    time: "November 26 2025",
+    name: "Did you know that great design is actually a formula?",
+    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-uiux-designthinking-activity-7399181903959900160-1_VB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    description: "If you ever struggle to make an 𝗮𝗽𝗽 𝗶𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲 or presentation look balanced, you might be missing the 60-30-10 𝗿𝘂𝗹𝗲.",
+    image:
+      "/learn/1764102434759.jpeg"
+  },
+
+  {
+    type: 'post',
+    tags: ['PM', 'RG',],
+    time: "October 25 2025",
+    name: "Why is important Requirements Gathering?",
+    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_softwaredevelopment-projectmanagement-requirementsgathering-activity-7387662318886711296-qlvQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    description: "ඔයත් Student කෙනෙක් නම්.. කැම්පස් Undergraduate නම්, IT related degree එකක් නම් කරන්නෙ Software Development ගෘප් ප්‍රොජෙක්ට් කරද්දි හදන්න හිතාගෙන පටන් ගත්ත එක නෙවෙයි නේද අන්තිමට ආවෙ..ඒ ඇයි..",
+    image:
+      "/learn/1761355951739.jpeg"
+  },
+
+  {
+    type: 'post',
+    tags: ['SAD', 'SDLC',],
+    time: "August 02 2025",
+    name: "What is SDLC?",
+    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-sad-sdlc-activity-7357335143738454016-6zer?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    description: "SDLC (𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗟𝗶𝗳𝗲 𝗖𝘆𝗰𝗹𝗲) is a structured process for building software. Think of it as a blueprint for building a House. It's a plan that guides the entire process from",
+    image:
+      "/learn/1754125389419.jpeg"
+  },
+
+  {
+    type: 'post',
     tags: ['firebase', 'google',],
     time: "July 11 2025",
     name: "What is Firebase?",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7349484314755047428/",
     description: "Firebase is Google's comprehensive platform designed to help you 𝗯𝘂𝗶𝗹𝗱, 𝗿𝗲𝗹𝗲𝗮𝘀𝗲, 𝗮𝗻𝗱 𝗴𝗿𝗼𝘄 your digital products. Think of it as a powerful 𝗕𝗮𝗰𝗸𝗲𝗻𝗱-𝗮𝘀-𝗮-𝗦𝗲𝗿𝘃𝗶𝗰𝗲 (BaaS) that provides a wide array of integrated tools. Firebase handles 𝘀𝗲𝗿𝘃𝗲𝗿-𝘀𝗶𝗱𝗲 infrastructure, freeing you to focus on crafting exceptional user experiences on the frontend.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQGViunjxXAeDA/feedshare-shrink_2048_1536/B56Zf6dCEMHIAs-/0/1752253606223?e=1755734400&v=beta&t=qaMK9wU5kJ3kFU7ofFZfyAwS6t8jPYuPI1yYuGRlNI4"
-  },
-
-  {
-    type: 'post',
-    tags: ['space',],
-    time: "July 07 2025",
-    name: "My Selfie just came back from Space!",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7347924111509082112/",
-    description: "You won't believe this! After a two-month wait, my 𝗖𝗿𝘂𝗻𝗰𝗵𝗟𝗮𝗯𝘀 𝗦𝗽𝗮𝗰𝗲 𝗦𝗲𝗹𝗳𝗶𝗲 with Gihan Pramith and Rasil Laksika Kottagoda is finally here. We literally got our photo taken with Earth as our backdrop, from space!",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQFabtra6BMLcA/feedshare-shrink_2048_1536/B56ZfkSBL6G0Ao-/0/1751881624290?e=1755734400&v=beta&t=EWq_Su6fF7N6k-_j5Od1h_olgWe6L7WI63wGlc99-lg"
+      "/learn/1752253606223.jpeg"
   },
 
   {
     type: 'post',
     tags: ['git', 'github',],
     time: "June 11 2025",
-    name: "Ever wondered how 𝘃𝗲𝗿𝘀𝗶𝗼𝗻 𝗰𝗼𝗻𝘁𝗿𝗼𝗹 really works?",
+    name: "Ever wondered how version control really works?",
     link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_git-github-versioncontrol-activity-7338524455758897152-w9bA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
     description: "This simple visual breaks down how Git flows from your working directory to the remote repository using essential commands like 𝗴𝗶𝘁 𝗮𝗱𝗱, 𝗰𝗼𝗺𝗺𝗶𝘁, 𝗽𝘂𝘀𝗵, 𝗽𝘂𝗹𝗹, and more.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQGV17I0ag8NEg/feedshare-shrink_2048_1536/B56ZdetGVqGQAo-/0/1749640572551?e=1755734400&v=beta&t=lbPWeFiXUv7AO57v3fZfOcGagNJcBsn1UmwF2AkHdbg"
+      "/learn/1749640572551.jpeg"
   },
 
-  {
-    type: 'post',
-    tags: ['dart', 'flutter','sinhala'],
-    time: "June 02 2025",
-    name: "Let's talk about Null Safety",
-    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-flutter-activity-7335145654396100609-80L_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    description: "අපි Develop කරන ඕනෙම ඇප් එකක් හෝ කෝඩ් එකක් හෝ වේවා 𝗖𝗿𝗮𝘀𝗵 වෙන එක නම් අප්‍රසන්න අත්දැකීමක්.මේ විදියට Crash වීමට බලපාන එක හේතුවක් විදියට 𝗩𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀 𝗡𝘂𝗹𝗹 වීම පෙන්වන්න පුලුවන්.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQHUwx3VYLH72w/feedshare-shrink_1280/B56ZctQZhWGsAs-/0/1748810963786?e=1755734400&v=beta&t=TdNfWUDomByBgwegtAEn0XOl7hAc4RlN3OPSLGth-iw"
-  },
-  {
-    type: 'post',
-    tags: ['dart', 'flutter','sinhala'],
-    time: "May 30 2025",
-    name: "මොකක්ද 𝗔𝗿𝗿𝗼𝘄 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 එකක් කියන්නෙ?",
-    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-basics-activity-7334058477494906882-LT_f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    description: "Arrow function එකක් එහෙමත් නැත්තන් තවත් නම් වලින් කිව්වොත් 𝗙𝗮𝘁 𝗮𝗿𝗿𝗼𝘄 function, 𝗟𝗮𝗺𝗯𝗱𝗮 function or 𝗦𝗵𝗼𝗿𝘁𝗵𝗮𝗻𝗱 syntax කියන්නෙ තනි Expression එකක් කෙටිම විදියට හසුරවන්න හදපු Function එකක්. මෙක තේරෙන්න අපි Code එකක් බලමු. ",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQEXGN036j0oXA/feedshare-shrink_1280/B56Zcd142BGQAk-/0/1748552357244?e=1755734400&v=beta&t=FkHlEYeynOFtmRvCySTJWU4WhHLPC8nPh9ymRxOIoOM"
-  },
-  {
-    type: 'post',
-    tags: ['dart', 'flutter','sinhala'],
-    time: "May 29 2025",
-    name: "මොකක්ද 𝗦𝘁𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝗽𝗼𝗹𝗮𝘁𝗶𝗼𝗻 කියන්නෙ?",
-    link: "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dart-sinhalen-activity-7333696108864393217-_2CI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
-    description: "𝗗𝗮𝗿𝘁 වල විතරක් නෙවෙයි වෙනත් ඕනෙම Programming Language එකකින් උනත් Variable එකක් හරි Expression එකක් හරි String variable එකකට Bind කරන එක තමයි String Interpolation කියන්නෙ.Dart වලදි මේක කරන විදිය අපි බලමු. Dart වල Special Symbols 2ක් පාවිච්චි කරනවා",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQERiq00AEsS2Q/feedshare-shrink_1280/B56ZcYj7SCHUAk-/0/1748463761850?e=1755734400&v=beta&t=0ZnmPU3x0SNXnspTTi3tgWlFT791_4DRetGP6G3KZsE"
-  },
   {
     type: 'button',
     time: "-",
