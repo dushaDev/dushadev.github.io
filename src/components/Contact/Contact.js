@@ -70,7 +70,11 @@ export default function Contact() {
 
   return (
     <section className="px-6 text-center h-screen" ref={containerRef}>
-      <h2 className="text-center text-4xl font-bold mt-10 mb-10">CONTACT</h2>
+      <h2 className="text-center text-5xl md:text-6xl font-black mb-16 mt-10 tracking-tight">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+          CONTACT
+        </span>
+      </h2>
       <p className="text-secondary text-xl mb-8" ref={contactRef1}>
         Have a question or want to work together? Leave your details and
         I&apos;ll get back to you as soon as possible.
@@ -122,6 +126,7 @@ export default function Contact() {
             placeholder="name"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
+            suppressHydrationWarning
           />
           <input
             type="email"
@@ -129,6 +134,7 @@ export default function Contact() {
             placeholder="email"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
+            suppressHydrationWarning
           />
           <textarea
             name="message"
@@ -137,6 +143,7 @@ export default function Contact() {
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
             autoComplete="off"
+            suppressHydrationWarning
           />
 
           <div className="flex justify-end">

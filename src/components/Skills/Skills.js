@@ -77,7 +77,11 @@ export default function Skills() {
       ref={containerRef}
     >
       <div className="container mx-auto px-6 flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold mb-16">SKILLS</h2>
+        <h2 className="text-center text-5xl md:text-6xl font-black mb-16 tracking-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+            SKILLS
+          </span>
+        </h2>
 
         <div
           className="justify-center grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:grid-cols-3 gap-10"
