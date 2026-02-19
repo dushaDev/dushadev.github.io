@@ -1,5 +1,6 @@
 "use client";
 
+"use client";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { gsap } from "gsap";

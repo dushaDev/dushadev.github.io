@@ -126,6 +126,7 @@ export default function Contact() {
             placeholder="name"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
+            suppressHydrationWarning
           />
           <input
             type="email"
@@ -133,6 +134,7 @@ export default function Contact() {
             placeholder="email"
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
+            suppressHydrationWarning
           />
           <textarea
             name="message"
@@ -141,6 +143,7 @@ export default function Contact() {
             className="w-full p-3 bg-neutral rounded-sm shadow-md"
             required
             autoComplete="off"
+            suppressHydrationWarning
           />
 
           <div className="flex justify-end">
