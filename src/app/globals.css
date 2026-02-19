@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #ff7037; /*#009479;*/
+  --primary: #ff7037;
+  /*#009479;*/
   --background: #303030;
   --on-background: #353535;
   --secondary: #ffffff;
@@ -27,20 +28,11 @@
 }
 
 body {
-  background: var(--background);
+  background-color: #050505;
   color: var(--foreground);
   font-family: var(--font-inria-sans);
 }
+
 html {
   scroll-behavior: smooth;
-}
-
-.globalBackground {
-  background-image: url("/background/background.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
 }

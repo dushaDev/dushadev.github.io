@@ -93,9 +93,13 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center lg:h-screen md:px-20 lg:px-20 " ref={containerRef}>
+    <section id="projects" className="relative flex flex-col items-center justify-center min-h-screen py-20 px-6" ref={containerRef}>
       <div className="container mx-auto px-6 flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold mb-16">PROJECTS</h2>
+        <h2 className="text-center text-5xl md:text-6xl font-black mb-16 tracking-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+            PROJECTS
+          </span>
+        </h2>
 
 
         <div className="flex flex-wrap justify-center gap-6" ref={projRef}>
