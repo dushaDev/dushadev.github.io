@@ -1,0 +1,1 @@
+SDLC (𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗟𝗶𝗳𝗲 𝗖𝘆𝗰𝗹𝗲) is a structured process for building software. Think of it as a blueprint for building a House. It's a plan that guides the entire process from

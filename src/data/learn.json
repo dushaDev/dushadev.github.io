@@ -1,0 +1,102 @@
+[
+  {
+    "id": "post1",
+    "name": "Dart 3.10 is here, and your UI code is about to get much cleaner",
+    "time": "January 11 2026",
+    "tags": [
+      "Flutter",
+      "Dart",
+      "dev"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-dart-softwareengineering-activity-7415984863557640192-rcuE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "The latest release of 𝗗𝗮𝗿𝘁 3.10 introduces 𝗗𝗼𝘁 𝗦𝗵𝗼𝗿𝘁𝗵𝗮𝗻𝗱𝘀 (Static Namespace Shorthands). This feature allows you to omit the class or enum name when the type can be inferred from the context.",
+    "image": "/images/learn/learn_post1.jpeg"
+  },
+  {
+    "id": "post2",
+    "name": "My first Flutter package is live on pub.dev",
+    "time": "December 27 2025",
+    "tags": [
+      "flutter",
+      "dart",
+      "dev"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-opensource-coding-activity-7410632161319645184-Dsw1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "I built a small utility called 𝗚𝗿𝗲𝗲𝘁𝗶𝗳𝘆. It handles time-aware greetings (like \"Good Morning\") with support for randomization and custom message lists.",
+    "image": "/images/learn/learn_post2.jpeg"
+  },
+  {
+    "id": "post3",
+    "name": "Did you know that great design is actually a formula?",
+    "time": "November 26 2025",
+    "tags": [
+      "UI",
+      "UX"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-uiux-designthinking-activity-7399181903959900160-1_VB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "If you ever struggle to make an 𝗮𝗽𝗽 𝗶𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲 or presentation look balanced, you might be missing the 60-30-10 𝗿𝘂𝗹𝗲.",
+    "image": "/images/learn/learn_post3.jpeg"
+  },
+  {
+    "id": "post4",
+    "name": "Why is important Requirements Gathering?",
+    "time": "October 25 2025",
+    "tags": [
+      "PM",
+      "RG"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_softwaredevelopment-projectmanagement-requirementsgathering-activity-7387662318886711296-qlvQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "ඔයත් Student කෙනෙක් නම්.. කැම්පස් Undergraduate නම්, IT related degree එකක් නම් කරන්නෙ Software Development ගෘප් ප්‍රොජෙක්ට් කරද්දි හදන්න හිතාගෙන පටන් ගත්ත එක නෙවෙයි නේද අන්තිමට ආවෙ..ඒ ඇයි..",
+    "image": "/images/learn/learn_post4.jpeg"
+  },
+  {
+    "id": "post5",
+    "name": "What is SDLC?",
+    "time": "August 02 2025",
+    "tags": [
+      "SAD",
+      "SDLC"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-sad-sdlc-activity-7357335143738454016-6zer?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "SDLC (𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗟𝗶𝗳𝗲 𝗖𝘆𝗰𝗹𝗲) is a structured process for building software. Think of it as a blueprint for building a House. It's a plan that guides the entire process from",
+    "image": "/images/learn/learn_post5.jpeg"
+  },
+  {
+    "id": "post6",
+    "name": "What is Firebase?",
+    "time": "July 11 2025",
+    "tags": [
+      "firebase",
+      "google"
+    ],
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7349484314755047428/",
+    "techStack": [],
+    "type": "post",
+    "description": "Firebase is Google's comprehensive platform designed to help you 𝗯𝘂𝗶𝗹𝗱, 𝗿𝗲𝗹𝗲𝗮𝘀𝗲, 𝗮𝗻𝗱 𝗴𝗿𝗼𝘄 your digital products. Think of it as a powerful 𝗕𝗮𝗰𝗸𝗲𝗻𝗱-𝗮𝘀-𝗮-𝗦𝗲𝗿𝘃𝗶𝗰𝗲 (BaaS) that provides a wide array of integrated tools. Firebase handles 𝘀𝗲𝗿𝘃𝗲𝗿-𝘀𝗶𝗱𝗲 infrastructure, freeing you to focus on crafting exceptional user experiences on the frontend.",
+    "image": "/images/learn/learn_post6.jpeg"
+  },
+  {
+    "id": "post7",
+    "name": "Ever wondered how version control really works?",
+    "time": "June 11 2025",
+    "tags": [
+      "git",
+      "github"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_git-github-versioncontrol-activity-7338524455758897152-w9bA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [],
+    "type": "post",
+    "description": "This simple visual breaks down how Git flows from your working directory to the remote repository using essential commands like 𝗴𝗶𝘁 𝗮𝗱𝗱, 𝗰𝗼𝗺𝗺𝗶𝘁, 𝗽𝘂𝘀𝗵, 𝗽𝘂𝗹𝗹, and more.",
+    "image": "/images/learn/learn_post7.jpeg"
+  }
+]

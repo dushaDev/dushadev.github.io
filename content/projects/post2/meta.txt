@@ -1,0 +1,6 @@
+name: Smart Water Manager
+time: 2026 Jan
+tags: IOT
+link: #
+techStack: Arduino, C++
+image: /images/projects/projects_post2.jpeg

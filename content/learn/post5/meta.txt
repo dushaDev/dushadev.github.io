@@ -1,0 +1,6 @@
+name: What is SDLC?
+time: August 02 2025
+tags: SAD, SDLC
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-sad-sdlc-activity-7357335143738454016-6zer?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+image: /learn/1754125389419.jpeg
+type: post

@@ -1,0 +1,6 @@
+name: NSBM FindX
+time: 2025 june
+tags: mobile
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_findx-flutterdev-firebase-activity-7333372453533949952-bDpc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+techStack: Flutter, Gemini Vision, Firebase
+image: /images/projects/projects_post4.jpeg

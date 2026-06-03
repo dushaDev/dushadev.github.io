@@ -13,6 +13,11 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
 
 const images = ["/pics/pic0.webp", "/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
+const phases = [
+  "Undergraduate in Software Engineering",
+  "Full Stack Developer",
+  "UI/UX Enthusiast",
+];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,11 +27,6 @@ export default function Home() {
   const containerRef = useRef(null);
 
   const textRef = useRef(null);
-  const phases = [
-    "Undergraduate in Software Engineering",
-    "Full Stack Developer",
-    "UI/UX Enthusiast",
-  ];
 
   useEffect(() => {
     let currentIndex = 0;
@@ -66,7 +66,7 @@ export default function Home() {
 
       <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between z-10">
         <div className="text-center md:text-left md:w-3/5 mt-10 md:mt-0" ref={leftRef}>
-          <h2 className="text-2xl md:text-3xl font-light text-gray-300 mb-2">Hello, I'm</h2>
+          <h2 className="text-2xl md:text-3xl font-light text-gray-300 mb-2">Hello, I&apos;m</h2>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
               DUSHAN

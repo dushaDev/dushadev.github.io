@@ -1,0 +1,1 @@
+This simple visual breaks down how Git flows from your working directory to the remote repository using essential commands like 𝗴𝗶𝘁 𝗮𝗱𝗱, 𝗰𝗼𝗺𝗺𝗶𝘁, 𝗽𝘂𝘀𝗵, 𝗽𝘂𝗹𝗹, and more.

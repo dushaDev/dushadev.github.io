@@ -1,0 +1,6 @@
+name: LinkedInPreview
+time: 2026 Feb
+tags: web
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dev-fun-activity-7439972101895380993-5MYX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+techStack: React, Next.js
+image: /images/projects/projects_post3.jpeg

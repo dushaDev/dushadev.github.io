@@ -193,7 +193,7 @@ export default function About() {
               <span className="text-primary">guitar</span>.
             </p>
             <p className="text-xl mt-4">
-              Always <span className="text-primary">curious</span> and eager to
+              Always <span className="text-primary">curious </span> and eager to
               learn, I&apos;m passionate about turning ideas into meaningful
               digital experiences.
             </p>

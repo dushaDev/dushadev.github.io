@@ -1,0 +1,67 @@
+[
+  {
+    "id": "post1",
+    "name": "Sinhala Snap",
+    "time": "2025 Dec",
+    "tags": [
+      "mobile"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_androiddevelopment-flutter-mobileapps-activity-7466169151858978816-c6KD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [
+      "Flutter",
+      "Android"
+    ],
+    "type": "post",
+    "description": "I am pleased to share that 𝗦𝗶𝗻𝗵𝗮𝗹𝗮 𝗦𝗻𝗮𝗽 is now available on the Google 𝗣𝗹𝗮𝘆 𝗦𝘁𝗼𝗿𝗲. 🤗 \r\n\r\n𝗦𝗶𝗻𝗵𝗮𝗹𝗮 𝗦𝗻𝗮𝗽 is a mobile application designed to simplify photo editing and customization specifically for 𝗦𝗶𝗻𝗵𝗮𝗹𝗮 𝗹𝗮𝗻𝗴𝘂𝗮𝗴𝗲 users. It allows users to seamlessly add stylized Sinhala typography, quotes, and creative text overlays onto their images.\r\n\r\n𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 & 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹𝗶𝘁𝘆:\r\n\r\n• 𝗦𝗶𝗻𝗵𝗮𝗹𝗮 𝗧𝘆𝗽𝗼𝗴𝗿𝗮𝗽𝗵𝘆: Access a variety of Sinhala fonts tailored for creative design.\r\n\r\n• 𝗧𝗲𝘅𝘁 𝗖𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻: Adjust text size, alignment, color, and positioning on any image.\r\n\r\n• 𝗨𝘀𝗲𝗿-𝗙𝗿𝗶𝗲𝗻𝗱𝗹𝘆 𝗜𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲: A straightforward workflow focused on quick and efficient image editing without complex menus.\r\n\r\nI welcome your feedback, bug reports, and suggestions to help improve its stability and performance ahead of the official production release.\r\n\r\nYou can download the app via the links below\r\nhttps://lnkd.in/gx-jkNwg\r\n\r\nThank you for your support and valuable insights.☺️\r\n\r\nhashtag#AndroidDevelopment hashtag#Flutter hashtag#MobileApps hashtag#GooglePlayConsole hashtag#AppDevelopment",
+    "image": "/images/projects/projects_post1.png"
+  },
+  {
+    "id": "post2",
+    "name": "Smart Water Manager",
+    "time": "2026 Jan",
+    "tags": [
+      "IOT"
+    ],
+    "link": "#",
+    "techStack": [
+      "Arduino",
+      "C++"
+    ],
+    "type": "post",
+    "description": "𝗦𝗼𝗹𝘃𝗶𝗻𝗴 𝗹𝗼𝗰𝗮𝗹 𝗶𝗻𝗳𝗿𝗮𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲𝘀 𝘄𝗶𝘁𝗵 𝗗𝗜𝗬 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴. \r\n\r\nI recently designed and built a complete IoT water management system to automate our home water storage, combining software, electronics, and mechanical design.\r\n\r\n𝗧𝗵𝗲 𝗣𝗿𝗼𝗯𝗹𝗲𝗺\r\nLike many areas in Sri Lanka, our NWSDB water supply lacks sufficient pressure during the day. Water only reaches our overhead tanks between 10 PM and 4 AM. Waking up in the middle of the night to manage valves was not sustainable, so I needed an automated solution.\r\n\r\n𝗧𝗵𝗲 𝗣𝗹𝘂𝗺𝗯𝗶𝗻𝗴 𝗖𝗼𝗻𝘀𝘁𝗿𝗮𝗶𝗻𝘁\r\nThe physical setup consists of two tanks fed by a single line, where Tank 1 overflows directly into Tank 2. Because of this serial setup, standard mechanical float valves could not be used without completely ripping out and reorganizing the existing plumbing network. An electronic sensing system was a good way forward.\r\n\r\n𝗧𝗵𝗲 𝗦𝗼𝗹𝗲𝗻𝗼𝗶𝗱 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 & 𝗖𝘂𝘀𝘁𝗼𝗺 𝗦𝗼𝗹𝘂𝘁𝗶𝗼𝗻\r\nMy initial plan was to use standard solenoid valves. However, keeping a solenoid energized and open for hours draws too much continuous power and risks thermal failure.\r\n\r\nInstead, I built my own motorized valve controller. I used an MG995 full-metal gear servo motor to mechanically actuate a standard PVC ball valve. To marry the servo to the valve, I had a custom mechanical holder 3D printed by hashtag#XYDDER3D.\r\nThis approach was incredibly cost-effective compared to industrial motorized valves. The custom valve unit breakdown:\r\n\r\n• 3D Print: Rs. 1800\r\n• PVC Valve: Rs. 1000\r\n• Servo Motor: Rs. 1500\r\n\r\n𝗧𝗵𝗲 𝗘𝗹𝗲𝗰𝘁𝗿𝗼𝗻𝗶𝗰𝘀 & 𝗟𝗼𝗴𝗶𝗰\r\nThe brain of the system is an Arduino Nano. To handle the high amperage spikes drawn by the servo motor when turning a stiff valve, I integrated a step-down buck converter into the power supply.\r\n\r\nFor the water detection, I designed a robust sensing circuit using NPN transistors. When water touches the sensor probes, the transistors switch on, sending a signal to the Arduino. I also programmed a multi-check software debounce to ensure electrical noise wouldn't trigger false readings.\r\n\r\nTo keep the final hardware clean, I mapped out the entire Vero board layout digitally before soldering. I highly recommend the open-source DIY Layout Creator tool for anyone planning custom perfboard circuits (https://lnkd.in/gCyb_pVz).\r\n\r\nThis project was a fantastic practical exercise in cross-disciplinary engineering, proving that with a bit of code, 3D printing, and basic electronics, you can build highly robust systems to overcome daily constraints.😉 hashtag#DIY hashtag#bydushan hashtag#electronic hashtag#IOT hashtag#Arduino hashtag#xydder3d hashtag#coding #",
+    "image": "/images/projects/projects_post2.jpeg"
+  },
+  {
+    "id": "post3",
+    "name": "LinkedInPreview",
+    "time": "2026 Feb",
+    "tags": [
+      "web"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-dev-fun-activity-7439972101895380993-5MYX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [
+      "React",
+      "Next.js"
+    ],
+    "type": "post",
+    "description": "Ever wish you could use bold, italics, or custom bullet points on LinkedIn? Now you can. 🚀\r\n\r\nI just launched a fun project(2) 𝗟𝗶𝗻𝗸𝗲𝗱𝗜𝗻𝗣𝗿𝗲𝘃𝗶𝗲𝘄, a lightweight Next.js tool designed to help you format your text and see a pixel-perfect live mobile preview before you hit publish. Just type, style, and copy!\r\n\r\nTry it out and make your next post stand out: \r\nhttps://lnkd.in/gyVEt_27\r\n\r\n𝗟𝗲𝘁 𝗺𝗲 𝗸𝗻𝗼𝘄 𝘄𝗵𝗮𝘁 𝘆𝗼𝘂 𝘁𝗵𝗶𝗻𝗸! 👇\r\n\r\nWould you like me to convert the \"𝗯𝗼𝗹𝗱\" and \"𝘪𝘵𝘢𝘭𝘪𝘤𝘴\" in this draft into the actual Unicode characters your tool uses, so you can copy and paste them directly into LinkedIn right now?\r\n\r\nhashtag#dushaDev hashtag#dev hashtag#fun hashtag#project hashtag#simple hashtag#nextjs hashtag#js hashtag#linkedin hashtag#preview hashtag#textstyle",
+    "image": "/images/projects/projects_post3.jpeg"
+  },
+  {
+    "id": "post4",
+    "name": "NSBM FindX",
+    "time": "2025 june",
+    "tags": [
+      "mobile"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_findx-flutterdev-firebase-activity-7333372453533949952-bDpc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA",
+    "techStack": [
+      "Flutter",
+      "Gemini Vision",
+      "Firebase"
+    ],
+    "type": "post",
+    "description": "Navigating lost and found items on a busy campus can be challenging. FindX simplifies this process by providing a centralized, intelligent platform to report, browse, and ultimately, recover lost belongings.",
+    "image": "/images/projects/projects_post4.jpeg"
+  }
+]

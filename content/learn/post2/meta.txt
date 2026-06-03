@@ -1,0 +1,6 @@
+name: My first Flutter package is live on pub.dev
+time: December 27 2025
+tags: flutter, dart, dev
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_flutter-opensource-coding-activity-7410632161319645184-Dsw1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+image: /learn/1766832388505.jpeg
+type: post

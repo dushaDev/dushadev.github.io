@@ -1,0 +1,6 @@
+name: Ever wondered how version control really works?
+time: June 11 2025
+tags: git, github
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_git-github-versioncontrol-activity-7338524455758897152-w9bA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+image: /learn/1749640572551.jpeg
+type: post
