@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 :root {
-  --font-inria-sans: 'Inria Sans', sans-serif;
   --primary: #ff7037;
   /*#009479;*/
   --background: #303030;

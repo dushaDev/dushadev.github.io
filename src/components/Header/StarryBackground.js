@@ -17,7 +17,6 @@ const StarryBackground = () => {
             duration: Math.random() * 3 + 2,
             delay: Math.random() * 5,
         }));
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setStars(newStars);
 
         // Generate comets periodically

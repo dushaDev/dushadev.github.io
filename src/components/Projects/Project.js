@@ -64,14 +64,11 @@ export default function Project({ project }) {
 
         {/* Tech Stack Icons with glow */}
         <div className="flex items-center space-x-3 mt-auto pt-3 border-t border-white/5">
-          {project.techStack.map((techName, index) => {
-            const Icon = getTechIcon(techName);
-            return Icon ? (
-              <div key={index} className="relative group/icon" title={techName}>
-                <Icon size={18} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
-              </div>
-            ) : null;
-          })}
+          {project.techStack.map((Tech, index) => (
+            <div key={index} className="relative group/icon">
+              <Tech.icon size={18} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
+            </div>
+          ))}
           {/* Action Arrow */}
           <div className="ml-auto text-primary opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
             →

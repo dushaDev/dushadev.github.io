@@ -4,6 +4,12 @@ import Footer from "@/components/Footer/Footer";
 
 import StarryBackground from "@/components/Header/StarryBackground";
 
+const inriaSans = Inria_Sans({
+  variable: "--font-inria-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+
 export const metadata = {
   title: "dushaDev",
   description: "This is my portfolio",
