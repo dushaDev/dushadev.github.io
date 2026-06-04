@@ -1,0 +1,12 @@
+Ever wish you could use bold, italics, or custom bullet points on LinkedIn? Now you can. 🚀
+
+I just launched a fun project(2) 𝗟𝗶𝗻𝗸𝗲𝗱𝗜𝗻𝗣𝗿𝗲𝘃𝗶𝗲𝘄, a lightweight Next.js tool designed to help you format your text and see a pixel-perfect live mobile preview before you hit publish. Just type, style, and copy!
+
+Try it out and make your next post stand out: 
+https://lnkd.in/gyVEt_27
+
+𝗟𝗲𝘁 𝗺𝗲 𝗸𝗻𝗼𝘄 𝘄𝗵𝗮𝘁 𝘆𝗼𝘂 𝘁𝗵𝗶𝗻𝗸! 👇
+
+Would you like me to convert the "𝗯𝗼𝗹𝗱" and "𝘪𝘵𝘢𝘭𝘪𝘤𝘴" in this draft into the actual Unicode characters your tool uses, so you can copy and paste them directly into LinkedIn right now?
+
+hashtag#dushaDev hashtag#dev hashtag#fun hashtag#project hashtag#simple hashtag#nextjs hashtag#js hashtag#linkedin hashtag#preview hashtag#textstyle

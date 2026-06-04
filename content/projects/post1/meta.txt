@@ -1,0 +1,6 @@
+name: Sinhala Snap
+time: 2025 Dec
+tags: mobile
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_androiddevelopment-flutter-mobileapps-activity-7466169151858978816-c6KD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+techStack: Flutter, Android
+image: /images/projects/projects_post1.png

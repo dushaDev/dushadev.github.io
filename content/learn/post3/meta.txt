@@ -1,0 +1,6 @@
+name: Did you know that great design is actually a formula?
+time: November 26 2025
+tags: UI, UX
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_dushadev-uiux-designthinking-activity-7399181903959900160-1_VB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+image: /learn/1764102434759.jpeg
+type: post

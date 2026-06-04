@@ -1,0 +1,1 @@
+I built a small utility called 𝗚𝗿𝗲𝗲𝘁𝗶𝗳𝘆. It handles time-aware greetings (like "Good Morning") with support for randomization and custom message lists.

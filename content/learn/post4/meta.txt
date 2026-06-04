@@ -1,0 +1,6 @@
+name: Why is important Requirements Gathering?
+time: October 25 2025
+tags: PM, RG
+link: https://www.linkedin.com/posts/dushan-madushanka-360252196_softwaredevelopment-projectmanagement-requirementsgathering-activity-7387662318886711296-qlvQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC30XHgBFSMYia7jzY49RCv9e-ag_c7YfUA
+image: /learn/1761355951739.jpeg
+type: post

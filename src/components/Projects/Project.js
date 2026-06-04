@@ -1,8 +1,6 @@
 "use client";
 
-import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase, FaAndroid, FaFigma, FaBootstrap } from "react-icons/fa";
-import { FaFlutter } from "react-icons/fa6";
-import { SiAdobeillustrator, SiAdobexd } from "react-icons/si";
+import { getTechIcon } from "@/utils/techIcons";
 
 
 import Image from "next/image";

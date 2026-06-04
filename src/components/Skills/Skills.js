@@ -2,7 +2,8 @@
 
 import { FaGithub, FaReact, FaJava, FaPython, FaPhp, FaDatabase, FaAndroid, FaFigma, FaBootstrap } from "react-icons/fa";
 import { FaFlutter, FaGitAlt } from "react-icons/fa6";
-import { SiAdobeillustrator, SiAdobexd, SiAdobephotoshop, SiFirebase } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { TbBrandAdobeIllustrator, TbBrandAdobeXd, TbBrandAdobePhotoshop } from "react-icons/tb";
 
 
 import { gsap } from "gsap";
@@ -33,12 +34,12 @@ const skills = [
     icon: FaAndroid,
   },
   { name: "Figma", altText: "Figma", icon: FaFigma },
-  { name: "XD", altText: "Adobe XD", icon: SiAdobexd },
-  { name: "Photoshop", altText: "Photoshop", icon: SiAdobephotoshop },
+  { name: "XD", altText: "Adobe XD", icon: TbBrandAdobeXd },
+  { name: "Photoshop", altText: "Photoshop", icon: TbBrandAdobePhotoshop },
   {
     name: "Illustrator",
     altText: "Adobe Illustrator",
-    icon: SiAdobeillustrator,
+    icon: TbBrandAdobeIllustrator,
   },
 ]
 
