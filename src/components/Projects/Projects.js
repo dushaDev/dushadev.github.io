@@ -31,7 +31,7 @@ export default function Projects() {
               PROJECTS
             </span>
           </h2>
-          <div className="flex gap-2 shrink-0">
+          <div className="hidden md:flex gap-2 shrink-0">
             <button
               onClick={() => scroll("left")}
               className="p-3 rounded-full bg-slate-50 border border-slate-200 hover:bg-primary hover:text-white hover:border-primary text-slate-700 transition-all duration-300"
@@ -52,11 +52,11 @@ export default function Projects() {
         {/* Carousel Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full py-4 px-2 scrollbar-none"
+          className="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory scroll-pl-6 md:scroll-pl-2 w-screen -mx-6 px-6 md:w-full md:mx-0 md:px-2 py-4 scrollbar-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {projectData.map((project, index) => (
-            <div key={index} className="snap-start shrink-0">
+            <div key={index} className="snap-start snap-always shrink-0">
               <Project project={project} />
             </div>
           ))}
