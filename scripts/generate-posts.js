@@ -110,4 +110,8 @@ const learn = generateSection('learn');
 fs.writeFileSync(path.join(dataDir, 'learn.json'), JSON.stringify(learn, null, 2));
 console.log(`Generated learn.json with ${learn.length} items`);
 
+const apps = generateSection('apps');
+fs.writeFileSync(path.join(dataDir, 'apps.json'), JSON.stringify(apps, null, 2));
+console.log(`Generated apps.json with ${apps.length} items`);
+
 console.log('Done!');

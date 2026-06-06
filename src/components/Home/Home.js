@@ -3,156 +3,95 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Observer } from "gsap/Observer";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
-
-gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, TextPlugin);
-
-const images = ["/pics/pic0.webp", "/pics/pic1.jpg", "/pics/pic2.jpg", "/pics/pic3.jpg"];
 
 export default function Home() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [fade, setFade] = useState(true);
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
-  const containerRef = useRef(null);
-
-  const textRef = useRef(null);
-  const phases = [
-    "Undergraduate in Software Engineering",
-    "Full Stack Developer",
-    "UI/UX Enthusiast",
-  ];
-
-  useEffect(() => {
-    let currentIndex = 0;
-    if (!textRef.current) return;
-
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-    function animate() {
-      // Loop through phases
-      phases.forEach((text) => {
-        tl.to(textRef.current, {
-          duration: 1,
-          text: text,
-          ease: "none",
-        })
-          .to({}, { duration: 2 }) // Wait
-          .to(textRef.current, {
-            duration: 0.5,
-            text: "",
-            ease: "none",
-          });
-      });
-    }
-
-    animate();
-
-    return () => tl.kill();
-  }, []);
-
   return (
-    <section
-      className="relative flex items-center justify-center min-h-screen text-white md:px-20 lg:px-20 overflow-hidden"
-      ref={containerRef}
-    >
-      {/* Background Planet Glow (CSS) - Removed as per request */}
-      {/* <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none z-[-1]"></div> */}
-
-      <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between z-10">
-        <div className="text-center md:text-left md:w-3/5 mt-10 md:mt-0" ref={leftRef}>
-          <h2 className="text-2xl md:text-3xl font-light text-gray-300 mb-2">Hello, I'm</h2>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+    <section className="relative flex items-center justify-center pt-6 pb-12 md:pt-32 md:pb-16 md:px-20 lg:px-20 overflow-hidden bg-background">
+      <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between z-10 gap-12 max-w-6xl">
+        {/* Bio Details */}
+        <div className="text-center md:text-left md:w-3/5">
+          <h2 className="text-lg md:text-xl font-light text-slate-500 mb-2">Hello, I'm</h2>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight mb-4 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 mr-2">
               DUSHAN
             </span>
-            <br />
-            <span className="text-white">MADUSHANKA</span>
+            <span className="text-slate-900">MADUSHANKA</span>
           </h1>
 
-          <div className="h-10">
-            <p className="text-xl md:text-2xl text-gray-400 font-mono">
-              &gt; <span ref={textRef}></span><span className="animate-pulse">|</span>
+          <div className="mb-6">
+            <p className="text-lg md:text-xl text-primary font-bold font-mono">
+              &gt; Mobile Application Developer
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a
-              href="https://drive.google.com/file/d/1n--ewgHiY6CKVkJFCJv0YEMcbYIDVX6a/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="px-8 py-3 bg-primary hover:bg-orange-600 text-white font-bold rounded-full shadow-[0_0_20px_rgba(255,112,55,0.4)] transition-all duration-300 transform hover:scale-105">
-                Download CV
-              </button>
-            </a>
-            <Link href="#contact">
-              <button className="px-8 py-3 border border-white/20 hover:bg-white/10 text-white font-bold rounded-full backdrop-blur-sm transition-all duration-300">
-                Contact Me
-              </button>
-            </Link>
+          <div className="text-slate-600 text-sm md:text-base leading-relaxed space-y-4 max-w-xl mb-8">
+            <p>
+              I&apos;m a Software Engineering undergraduate specializing in building high-quality, performant, and user-friendly mobile experiences.
+            </p>
+            <p>
+              My core focus lies in cross-platform and native mobile architectures, primarily <span className="text-primary font-semibold">Flutter</span> and <span className="text-primary font-semibold">Android</span>. I love integrating APIs, designing sleek interfaces, and transforming complex problems into simple, elegant digital solutions.
+            </p>
+
           </div>
 
-          <div className="flex space-x-6 mt-12 justify-center md:justify-start">
-            <Link
-              href="https://github.com/dushaDev"
-              target="_blank"
-              className="text-gray-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
-            >
-              <FaGithub size={32} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/dushan-madushanka-360252196"
-              target="_blank"
-              className="text-gray-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
-            >
-              <FaLinkedin size={32} />
-            </Link>
-            <Link
-              href="https://web.facebook.com/byDushana"
-              target="_blank"
-              className="text-gray-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
-            >
-              <FaFacebook size={32} />
-            </Link>
-          </div>
-        </div>
+          <div className="mt-8 flex flex-row flex-wrap items-center gap-6 justify-center md:justify-start">
+            <div className="flex flex-row gap-4">
+              <a
+                href="https://drive.google.com/file/d/1n--ewgHiY6CKVkJFCJv0YEMcbYIDVX6a/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-6 py-2.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-full transition-all duration-300 text-sm">
+                  Download CV
+                </button>
+              </a>
+              <Link href="#contact">
+                <button className="px-6 py-2.5 border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold rounded-full transition-all duration-300 text-sm">
+                  Contact Me
+                </button>
+              </Link>
+            </div>
 
-        <div
-          className="md:w-2/5 flex justify-center relative"
-          ref={rightRef}
-        >
-          {/* Floating Astronaut/Image Container */}
-          <div className="relative w-64 h-64 md:w-96 md:h-96">
-            {/* Image Glow Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-purple-600/40 blur-[60px] rounded-full animate-pulse"></div>
-
-            {/* Rotating rings */}
-            <div className="absolute inset-[-20px] border border-primary/30 rounded-full animate-spin-slow pointer-events-none"></div>
-            <div className="absolute inset-[-40px] border border-white/10 rounded-full animate-spin-reverse pointer-events-none"></div>
-
-            <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_50px_rgba(255,112,55,0.3)] relative z-10">
-              <Image
-                src={images[0]}
-                alt="Dushan"
-                fill
-                className={`object-cover transition-opacity duration-1000 ease-in-out ${fade ? "opacity-100" : "opacity-0"
-                  }`}
-                priority
-              />
+            <div className="flex space-x-5 items-center">
+              <Link
+                href="https://github.com/dushaDev"
+                target="_blank"
+                className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
+              >
+                <FaGithub size={24} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/dushan-madushanka-360252196"
+                target="_blank"
+                className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
+              >
+                <FaLinkedin size={24} />
+              </Link>
+              <Link
+                href="https://web.facebook.com/byDushana"
+                target="_blank"
+                className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110"
+              >
+                <FaFacebook size={24} />
+              </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
-        <span className="text-sm tracking-widest uppercase">Scroll</span>
+        {/* Profile Image */}
+        <div className="md:w-2/5 flex justify-center relative">
+          <div className="relative w-72 h-72 md:w-[28rem] md:h-[28rem]">
+            <Image
+              src="/pics/pic0.webp"
+              alt="Dushan"
+              fill
+              className="object-cover rounded-2xl"
+              priority
+            />
+            {/* Gradient fade on the bottom */}
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background to-transparent pointer-events-none rounded-b-2xl"></div>
+          </div>
+        </div>
       </div>
     </section>
   );

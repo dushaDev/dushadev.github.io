@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import * as React from "react";
 import Item from "./Item";
 import learnData from "@/data/learn.json";
@@ -19,53 +17,20 @@ const displayData = [
 ];
 
 export default function Learn() {
-  const learnRef = useRef(null);
-  const containerRef = useRef(null);
-  useEffect(() => {
-    // Animation for left element
-    gsap.fromTo(
-      learnRef.current,
-      { y: "5%", scale: 0.8, opacity: 0 },
-      {
-        y: 0,
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 70%",
-          end: "top 20%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <section className="relative flex items-center justify-center min-h-screen py-20 md:px-20 lg:px-20 " ref={containerRef}>
-      <div className="container mx-auto px-6 flex flex-col items-center">
-        <h2 className="text-center text-5xl md:text-6xl font-black mb-16 tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
+    <section className="relative flex items-center justify-center min-h-screen py-20 bg-white md:px-20 lg:px-20">
+      <div className="container mx-auto px-6 flex flex-col items-center md:items-start max-w-6xl w-full">
+        <h2 className="text-center md:text-left text-4xl md:text-5xl font-black mb-16 tracking-tight w-full">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
             LEARN
           </span>
         </h2>
 
-
-        <div className="flex flex-wrap justify-center gap-6" ref={learnRef}>
+        <div className="flex flex-wrap justify-center gap-8 max-w-6xl w-full">
           {displayData.map((item, index) => (
-            <Item
-              key={index}
-              item={item}
-            />
+            <Item key={index} item={item} />
           ))}
         </div>
-
-
       </div>
     </section>
   );

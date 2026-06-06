@@ -1,55 +1,48 @@
 "use client";
 
-"use client";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { gsap } from "gsap";
+import Logo from "@/components/Logo/Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
-  const headerRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  const toggleMenu = (e) => {
+    if (e) {
+      if (typeof e.preventDefault === "function") e.preventDefault();
+      if (typeof e.stopPropagation === "function") e.stopPropagation();
+    }
+    setIsOpen((prev) => !prev);
+  };
 
   const headerItems = useMemo(
     () => [
       { name: "Home", path: "home", status: true },
-      { name: "About", path: "about", status: true },
-      { name: "Skills", path: "skills", status: false },
       { name: "Projects", path: "projects", status: true },
+      { name: "My Apps", path: "apps", status: true },
       { name: "Learn", path: "learn", status: true },
       { name: "Contact", path: "contact", status: true },
     ],
     []
   );
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Initial Animation
   useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      { y: "-100%", opacity: 0 },
-      { y: 0, duration: 0.8, opacity: 1, ease: "power3.out" }
-    );
+    setMounted(true);
   }, []);
 
-  // Handle Scroll Effects and Active Section
   useEffect(() => {
     const handleScroll = () => {
-      // Handle Header Style on Scroll
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
 
-      // Handle Active Section
       let currentSection = "home";
-      // Offset for header height
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       for (let item of headerItems) {
         const section = document.getElementById(item.path);
@@ -70,40 +63,37 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [headerItems]);
 
+
   return (
     <nav
-      ref={headerRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? "bg-on-background/80 backdrop-blur-md shadow-lg py-2"
-        : "bg-transparent py-4"
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        mounted && (isScrolled || isOpen)
+          ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100 py-2"
+          : "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100 py-2 md:bg-transparent md:border-transparent md:shadow-none md:py-4"
+      }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center px-6">
         {/* Brand */}
-        <h1 className="text-white text-3xl font-light cursor-pointer select-none">
-          <span className="text-primary">{"{ "}</span>Dusha
-          <span className="font-bold">
-            <span className="text-primary">{"D"}</span>ev
-          </span>
-          <span className="text-primary">{" }"}</span>
-        </h1>
+        <Logo />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-10">
+        <ul className="hidden md:flex space-x-8">
           {headerItems.map((item) =>
             item.status ? (
               <li key={item.path}>
                 <a
                   href={`#${item.path}`}
-                  className={`text-foreground text-xl relative group transition-colors duration-300 ${activeSection === item.path
-                    ? "font-semibold text-primary"
-                    : "hover:text-primary"
-                    }`}
+                  className={`text-slate-600 text-sm font-bold uppercase tracking-wider relative group transition-colors duration-300 ${
+                    activeSection === item.path
+                      ? "text-primary"
+                      : "hover:text-primary"
+                  }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${activeSection === item.path ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                      activeSection === item.path ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                   ></span>
                 </a>
               </li>
@@ -111,11 +101,11 @@ const Header = () => {
           )}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground text-2xl focus:outline-none transition-transform active:scale-90"
+          className="md:hidden text-slate-700 hover:text-primary focus:outline-none transition-transform active:scale-90 relative z-[9999] cursor-pointer pointer-events-auto text-2xl animate-fade-in"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
+          type="button"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -123,8 +113,9 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-on-background/95 backdrop-blur-lg shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`md:hidden absolute top-full left-0 w-full bg-white/95 border-b border-slate-100 backdrop-blur-lg shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <ul className="flex flex-col items-center py-4 space-y-4">
           {headerItems.map((item) =>
@@ -132,10 +123,11 @@ const Header = () => {
               <li key={item.path} className="w-full text-center">
                 <a
                   href={`#${item.path}`}
-                  className={`block py-2 text-xl transition-colors ${activeSection === item.path
-                    ? "text-primary font-bold"
-                    : "text-foreground hover:text-primary"
-                    }`}
+                  className={`block py-2 text-lg transition-colors font-bold ${
+                    activeSection === item.path
+                      ? "text-primary"
+                      : "text-slate-600 hover:text-primary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

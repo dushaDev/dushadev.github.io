@@ -1,0 +1,20 @@
+[
+  {
+    "id": "app1",
+    "name": "Sinhala Snap App",
+    "time": "2025 Dec",
+    "tags": [
+      "mobile",
+      "utility"
+    ],
+    "link": "https://www.linkedin.com/posts/dushan-madushanka-360252196_androiddevelopment-flutter-mobileapps-activity-7466169151858978816-c6KD",
+    "techStack": [
+      "Flutter",
+      "Android",
+      "Firebase"
+    ],
+    "type": "post",
+    "description": "This is a sample mobile application description for Sinhala Snap App.\nIt helps users customize photo text using Sinhala fonts.\nKey Features:\n- Sinhala Typography\n- Image Customization\n- Clean UI/UX\n- Firebase analytics integrated",
+    "image": ""
+  }
+]

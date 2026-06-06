@@ -2,41 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
+  const [mounted, setMounted] = useState(false);
   const formRef = useRef(null);
-  // Animation refs
-  const contactRef1 = useRef(null);
-  const contactRef2 = useRef(null);
-  const contactRef3 = useRef(null);
-  const containerRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      [contactRef1.current, contactRef2.current, contactRef3.current],
-      { y: "10%", scale: 0.8, opacity: 0 },
-      {
-        y: 0,
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.in",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
-
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    setMounted(true);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -46,7 +21,7 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // From environment variables
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           email: formRef.current.email.value,
@@ -68,99 +43,120 @@ export default function Contact() {
     }
   };
 
-  return (
-    <section className="px-6 text-center h-screen" ref={containerRef}>
-      <h2 className="text-center text-5xl md:text-6xl font-black mb-16 mt-10 tracking-tight">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
-          CONTACT
-        </span>
-      </h2>
-      <p className="text-secondary text-xl mb-8" ref={contactRef1}>
-        Have a question or want to work together? Leave your details and
-        I&apos;ll get back to you as soon as possible.
-      </p>
+  if (!mounted) {
+    return (
+      <section className="px-6 py-20 bg-slate-50 min-h-screen flex flex-col justify-center items-center">
+        <div className="max-w-4xl w-full flex flex-col items-center md:items-start">
+          <h2 className="text-center md:text-left text-4xl md:text-5xl font-black mb-6 tracking-tight w-full animate-pulse">
+            CONTACT
+          </h2>
+        </div>
+      </section>
+    );
+  }
 
-      <div className="flex justify-center" ref={contactRef2}>
-        <div className="flex flex-col items-start space-y-4 mb-8">
-          <div className="flex items-center space-x-3">
-            <FaEnvelope className="text-primary text-xl" />
-            <span>dushanmadushankabeligala9@gmail.com</span>
+  return (
+    <section className="px-6 py-20 bg-slate-50 min-h-screen flex flex-col justify-center items-center">
+      <div className="max-w-4xl w-full flex flex-col items-center md:items-start">
+        <h2 className="text-center md:text-left text-4xl md:text-5xl font-black mb-6 tracking-tight w-full">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+            CONTACT
+          </span>
+        </h2>
+        <p className="text-slate-600 text-lg md:text-xl text-center md:text-left mb-12 max-w-2xl md:mx-0">
+          Have a question or want to work together? Leave your details and
+          I&apos;ll get back to you as soon as possible.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white border border-slate-100 p-8 md:p-12 rounded-3xl shadow-sm">
+          {/* Info Details */}
+          <div className="flex flex-col justify-center space-y-6">
+            <h3 className="text-2xl font-bold text-slate-800 mb-2">Get in Touch</h3>
+            <div className="flex items-center space-x-4 text-slate-600">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <FaEnvelope size={18} />
+              </div>
+              <span className="break-all font-medium text-sm md:text-base">dushanmadushankabeligala9@gmail.com</span>
+            </div>
+            <div className="flex items-center space-x-4 text-slate-600">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <FaPhone size={18} />
+              </div>
+              <span className="font-medium text-sm md:text-base">+94-767-771-005</span>
+            </div>
+            <div className="flex items-center space-x-4 text-slate-600">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <FaLinkedin size={18} />
+              </div>
+              <a
+                href="https://www.linkedin.com/in/dushan-madushanka-360252196"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary hover:underline font-medium text-sm md:text-base"
+              >
+                linkedin.com/dushan-madushanka
+              </a>
+            </div>
+            <div className="flex items-center space-x-4 text-slate-600">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <FaGithub size={18} />
+              </div>
+              <a
+                href="https://github.com/dushaDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary hover:underline font-medium text-sm md:text-base"
+              >
+                github.com/dushaDev
+              </a>
+            </div>
           </div>
-          <div className="flex items-center space-x-3">
-            <FaPhone className="text-primary text-xl" />
-            <span>+94-767-771-005</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <FaLinkedin className="text-primary text-xl" />
-            <a
-              href="https://www.linkedin.com/in/dushan-madushanka-360252196"
-              target="_blank"
-              rel="noopener noreferrer"
+
+          {/* Form */}
+          <div>
+            <h3 className="text-xl font-bold text-slate-800 mb-6">Send a Message</h3>
+            <form
+              ref={formRef}
+              className="flex flex-col space-y-4"
+              onSubmit={handleSubmit}
             >
-              linkedin.com/dushan-madushanka
-            </a>
-          </div>
-          <div className="flex items-center space-x-3">
-            <FaGithub className="text-primary text-xl" />
-            <a
-              href="https://github.com/dushaDev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github.com/dushaDev
-            </a>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl shadow-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-primary/50 text-sm"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl shadow-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-primary/50 text-sm"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="4"
+                className="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl shadow-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-primary/50 text-sm resize-none"
+                required
+              />
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3.5 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl shadow-md transition duration-300 disabled:bg-slate-300"
+              >
+                {loading ? "Sending Message..." : "Send Message"}
+              </button>
+            </form>
+            {success !== null && (
+              <p className={`mt-4 text-sm font-semibold ${success ? "text-green-600" : "text-red-600"}`}>
+                {success ? "Message sent successfully!" : "Failed to send message."}
+              </p>
+            )}
           </div>
         </div>
-      </div>
-
-      <div className="max-w-md mx-auto" ref={contactRef3}>
-        <h3 className="text-lg font-semibold mb-3">Send Message</h3>
-        <form
-          ref={formRef}
-          className="flex flex-col space-y-3"
-          onSubmit={handleSubmit}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="name"
-            className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            required
-            suppressHydrationWarning
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            required
-            suppressHydrationWarning
-          />
-          <textarea
-            name="message"
-            placeholder="message"
-            rows="3"
-            className="w-full p-3 bg-neutral rounded-sm shadow-md"
-            required
-            autoComplete="off"
-            suppressHydrationWarning
-          />
-
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-8 py-2 bg-secondary text-primary hover:bg-primary hover:text-secondary font-semibold rounded-sm shadow-md transition"
-            >
-              {loading ? "Sending.." : "Send"}
-            </button>
-          </div>
-        </form>
-        {success !== null && (
-          <p className={`mt-2 ${success ? "text-green-600" : "text-red-600"}`}>
-            {success ? "Message sent successfully!" : "Failed to send message."}
-          </p>
-        )}
       </div>
     </section>
   );

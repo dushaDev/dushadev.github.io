@@ -1,173 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const aboutRef = useRef(null);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-
-    // Animation for left element
-    gsap.fromTo(
-      aboutRef.current,
-      { y: "5%", scale: 0.8, opacity: 0 },
-      {
-        y: 0,
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 70%",
-          end: "top 20%",
-          scrub: 0.6,
-          markers: false,
-        },
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-    // // Animation for left element(Image)
-    // gsap.fromTo(
-    //   leftRef.current,
-    //   { opacity: 0 },
-    //   {
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power3.in",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "top 60%",
-    //       end: "top 20%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-    // gsap.fromTo(
-    //   leftRef.current,
-    //   { opacity: 1 },
-    //   {
-    //     opacity: 0,
-    //     duration: 1,
-    //     ease: "power3.out",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "bottom 80%",
-    //       end: "bottom 30%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-
-    // // Animation for right element(Text)
-    // gsap.fromTo(
-    //   rightRef.current,
-    //   { opacity: 0 },
-    //   {
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power3.in",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "top 60%",
-    //       end: "top 20%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-    // gsap.fromTo(
-    //   rightRef.current,
-    //   { opacity: 1 },
-    //   {
-    //     opacity: 0,
-    //     duration: 1,
-    //     ease: "power3.out",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "bottom 80%",
-    //       end: "bottom 30%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-
-    // // Animation for right element(Text)
-    // //open
-    // gsap.fromTo(
-    //   rightRef.current,
-    //   { x: "50%", y: "-10%", opacity: 0 },
-    //   {
-    //     x: 0,
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power3.in",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "top 100%",
-    //       end: "top 20%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-    // //close
-    // gsap.fromTo(
-    //   rightRef.current,
-    //   { x: 0, y: 0, opacity: 1 },
-    //   {
-    //     x: "50%",
-    //     y: "10%",
-    //     opacity: 0,
-    //     duration: 1,
-    //     ease: "power3.in",
-    //     scrollTrigger: {
-    //       trigger: containerRef.current,
-    //       start: "top 0%",
-    //       end: "bottom 30%",
-    //       scrub: 0.6,
-    //       markers: false,
-    //     },
-    //   }
-    // );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <section
-      ref={containerRef}
-      className="relative flex items-center justify-center h-screen md:px-20 lg:px-20"
-    >
+    <section className="relative flex items-center justify-center min-h-screen py-16 bg-white md:px-20 lg:px-20">
       <div className="container mx-auto px-6 flex flex-col items-center">
-        <h2 className="text-center text-4xl md:text-5xl font-black mb-16 tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
-            ABOUT
+        <h2 className="text-center text-4xl md:text-5xl font-black mb-12 tracking-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+            ABOUT ME
           </span>
         </h2>
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center" ref={aboutRef}>
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Image Section */}
-          <div
-            className="w-full md:w-1/3 flex justify-center md:justify-start hover:scale-101 transition-transform duration-300 relative"
-          >
-            {/* Image Glow Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-purple-600/20 blur-[50px] z-0 animate-pulse"></div>
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/5 blur-[30px] z-0"></div>
 
-            <div className="w-70 h-70 rounded-sm overflow-hidden border-2 border-primary shadow-[0_0_20px_rgba(255,112,55,0.3)] z-10 relative">
+            <div className="w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border border-slate-200 shadow-md z-10 relative bg-white">
               <Image
                 src="/pics/pic1.jpg"
                 alt="Dushan"
@@ -179,25 +28,19 @@ export default function About() {
           </div>
 
           {/* Text Section */}
-          <div
-            className="w-full md:w-2/3 text-center md:text-left mt-10 mb-10 md:mt-0 md:ml-10 "
-          >
-            <p className="text-2xl font-semibold mt-4 text-gray-200">Hey</p>
-            <p className="text-xl mt-2">
-              there! I&apos;m a{" "}
-              <span className="text-primary">Mobile App Developer</span>{" "}
-              and Software Engineering undergraduate who loves coding, creativity,
-              and problem-solving. When I&apos;m not immersed in tech, you&apos;ll
-              find me enjoying <span className="text-primary">music</span> —either
-              listening to my favorite songs or playing the{" "}
-              <span className="text-primary">guitar</span>.
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <p className="text-2xl font-bold text-slate-800">Hey there! 👋</p>
+            <p className="text-lg mt-4 text-slate-600 leading-relaxed">
+              I&apos;m <span className="text-primary font-semibold">Dushan Madushanka</span>, a dedicated{" "}
+              <span className="text-primary font-semibold">Mobile Application Developer</span> and Software Engineering undergraduate. I specialize in building high-quality, performant, and user-friendly mobile experiences.
             </p>
-            <p className="text-xl mt-4">
-              Always <span className="text-primary">curious</span> and eager to
-              learn, I&apos;m passionate about turning ideas into meaningful
-              digital experiences.
+            <p className="text-lg mt-4 text-slate-600 leading-relaxed">
+              My core focus is on cross-platform and native mobile architectures (specifically <span className="text-primary font-semibold">Flutter</span> and <span className="text-primary font-semibold">Android</span>), integrating APIs, and building modern designs. When I&apos;m not writing code, you&apos;ll find me playing the <span className="text-primary">guitar</span> or exploring new music.
             </p>
-            <p className="text-xl mt-4">
+            <p className="text-lg mt-4 text-slate-600 leading-relaxed">
+              Always curious and eager to learn, I enjoy turning complex problems into elegant, simple digital solutions.
+            </p>
+            <p className="text-lg mt-6 font-semibold text-slate-700">
               Let&apos;s build something awesome together! 😊
             </p>
           </div>

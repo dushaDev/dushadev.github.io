@@ -1,0 +1,7 @@
+This is a sample mobile application description for Sinhala Snap App.
+It helps users customize photo text using Sinhala fonts.
+Key Features:
+- Sinhala Typography
+- Image Customization
+- Clean UI/UX
+- Firebase analytics integrated
