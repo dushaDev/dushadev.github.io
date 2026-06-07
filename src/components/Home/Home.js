@@ -29,7 +29,7 @@ export default function Home() {
               I&apos;m a Software Engineering undergraduate specializing in building high-quality, performant, and user-friendly mobile experiences.
             </p>
             <p>
-              My core focus lies in cross-platform and native mobile architectures, primarily <span className="text-primary font-semibold">Flutter</span> and <span className="text-primary font-semibold">Android</span>. I love integrating APIs, designing sleek interfaces, and transforming complex problems into simple, elegant digital solutions.
+              My core focus lies in cross-platform and native mobile architectures, primarily <span className="text-primary font-semibold">Flutter</span>,<span className="text-primary font-semibold">React Native</span> and <span className="text-primary font-semibold">Android Native</span>. I love integrating APIs, designing sleek interfaces, and transforming complex problems into simple, elegant digital solutions.
             </p>
 
           </div>

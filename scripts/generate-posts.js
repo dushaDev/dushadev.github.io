@@ -12,6 +12,10 @@ if (!fs.existsSync(dataDir)) {
 if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir, { recursive: true });
 }
+const appsPublicDir = path.join(publicDir, 'apps');
+if (!fs.existsSync(appsPublicDir)) {
+  fs.mkdirSync(appsPublicDir, { recursive: true });
+}
 
 function parseMetaFile(filePath) {
   const meta = {};
@@ -50,6 +54,45 @@ function getPostImage(postDir, category, postName) {
   return '';
 }
 
+function getAppAssets(appId) {
+  const assets = {
+    icon: '',
+    featureGraphic: '',
+    screenshots: []
+  };
+  const appDir = path.join(publicDir, 'apps', appId);
+  if (fs.existsSync(appDir)) {
+    const files = fs.readdirSync(appDir);
+    
+    // Find icon
+    const iconFile = files.find(file => file.startsWith('logo') || file.startsWith('icon'));
+    if (iconFile) assets.icon = `/images/apps/${appId}/${iconFile}`;
+    
+    // Find feature graphic
+    const featureFile = files.find(file => file.startsWith('feature') || file.startsWith('banner'));
+    if (featureFile) assets.featureGraphic = `/images/apps/${appId}/${featureFile}`;
+    
+    // Find screenshots in subfolder
+    const screenshotsDir = path.join(appDir, 'screenshots');
+    if (fs.existsSync(screenshotsDir)) {
+      const screenshotFiles = fs.readdirSync(screenshotsDir).filter(file => {
+        return fs.statSync(path.join(screenshotsDir, file)).isFile();
+      });
+      // Sort numerically
+      screenshotFiles.sort((a, b) => {
+        const numA = parseInt(path.parse(a).name, 10);
+        const numB = parseInt(path.parse(b).name, 10);
+        if (!isNaN(numA) && !isNaN(numB)) {
+          return numA - numB;
+        }
+        return a.localeCompare(b);
+      });
+      assets.screenshots = screenshotFiles.map(file => `/images/apps/${appId}/screenshots/${file}`);
+    }
+  }
+  return assets;
+}
+
 function getPostNumber(dirName) {
   const match = dirName.match(/\d+/);
   return match ? parseInt(match[0], 10) : Infinity;
@@ -84,17 +127,31 @@ function generateSection(category) {
 
     const imagePath = getPostImage(postDir, category, dir);
 
-    posts.push({
+    const postItem = {
       id: dir,
       name: meta.name || '',
       time: meta.time || '',
       tags: meta.tags || [],
       link: meta.link || '',
+      playstore: meta.playstore || '',
+      appstore: meta.appstore || '',
+      appgallery: meta.appgallery || '',
+      apk: meta.apk || '',
       techStack: meta.techstack || [],
       type: meta.type || 'post', // Default to post for learn items
       description: description,
       image: imagePath || meta.image || ''
-    });
+    };
+
+    if (category === 'apps') {
+      const appAssets = getAppAssets(dir);
+      postItem.icon = appAssets.icon;
+      postItem.featureGraphic = appAssets.featureGraphic;
+      postItem.screenshots = appAssets.screenshots;
+      postItem.video = meta.video || '';
+    }
+
+    posts.push(postItem);
   });
 
   return posts;

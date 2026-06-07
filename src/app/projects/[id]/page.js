@@ -1,6 +1,7 @@
 import Link from "next/link";
 import projectData from "@/data/projects.json";
 import { getTechIcon } from "@/utils/techIcons";
+import { FaLinkedin } from "react-icons/fa";
 
 export async function generateStaticParams() {
   return projectData.map((project) => ({
@@ -60,37 +61,35 @@ export default async function ProjectDetailPage({ params }) {
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-6">
-            <div className="pb-2 border-b border-slate-100 flex items-center justify-between gap-4 flex-wrap">
+        <div className="space-y-6">
+          <div className="pb-2 border-b border-slate-100 flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex items-center gap-3 flex-wrap">
               <h2 className="text-xl font-bold text-slate-800">Project Story & Details</h2>
-              <div className="flex items-center gap-2.5">
-                {project.techStack?.map((tech, i) => {
-                  const Icon = getTechIcon(tech);
-                  return Icon ? (
-                    <div key={i} title={tech} className="text-primary hover:text-orange-600 transition-colors">
-                      <Icon size={20} />
-                    </div>
-                  ) : null;
-                })}
-              </div>
+              {isLinkedInLink && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#0a66c2] hover:bg-[#004182] text-white rounded-md font-bold shadow-sm transition-all duration-300 text-[10px] uppercase tracking-wider cursor-pointer"
+                >
+                  <FaLinkedin size={10} />
+                  <span>Read In</span>
+                </a>
+              )}
             </div>
-            <div className="text-slate-600 leading-relaxed text-base whitespace-pre-wrap">
-              {project.description}
+            <div className="flex items-center gap-2.5">
+              {project.techStack?.map((tech, i) => {
+                const Icon = getTechIcon(tech);
+                return Icon ? (
+                  <div key={i} title={tech} className="text-primary hover:text-orange-600 transition-colors">
+                    <Icon size={20} />
+                  </div>
+                ) : null;
+              })}
             </div>
           </div>
-
-          <div className="space-y-6">
-            {isLinkedInLink && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center px-6 py-3.5 bg-primary hover:bg-orange-600 text-white rounded-2xl font-bold shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
-              >
-                Read in LinkedIn
-              </a>
-            )}
+          <div className="text-slate-600 leading-relaxed text-base whitespace-pre-wrap">
+            {project.description}
           </div>
         </div>
       </div>

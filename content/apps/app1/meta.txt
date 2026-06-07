@@ -1,6 +1,6 @@
-name: Sinhala Snap App
-time: 2025 Dec
+name: Sinhala Snap
+time: 2026 June
 tags: mobile, utility
-link: https://www.linkedin.com/posts/dushan-madushanka-360252196_androiddevelopment-flutter-mobileapps-activity-7466169151858978816-c6KD
-techStack: Flutter, Android, Firebase
+playstore: https://play.google.com/store/apps/details?id=com.dushadev.sinhalasnap
+techStack: Flutter, Android
 image: 

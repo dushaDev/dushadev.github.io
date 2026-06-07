@@ -39,8 +39,8 @@ export default function Item({ item }) {
             </div>
           )}
           {/* Date Tag */}
-          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm border border-slate-100 px-3 py-1 rounded-full shadow-sm">
-            <span className="text-primary text-xs font-mono font-semibold">{item.time}</span>
+          <div className="absolute top-2 right-2 bg-white/95 backdrop-blur-sm border border-slate-100 px-2 py-0.5 sm:px-2.5 sm:py-0.5 rounded sm:rounded-md shadow-sm flex items-center justify-center">
+            <span className="text-primary text-[10px] sm:text-xs font-mono font-bold tracking-wide leading-none">{item.time}</span>
           </div>
         </Link>
 

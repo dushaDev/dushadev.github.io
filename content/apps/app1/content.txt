@@ -1,7 +1,69 @@
-This is a sample mobile application description for Sinhala Snap App.
-It helps users customize photo text using Sinhala fonts.
+ඔයාගේ ෆොටෝස් ලස්සනම නිර්මාණ බවට පත් කරන්න ලංකාවේ තියෙන හොඳම සිංහල Photo Editor සහ Typography ඇප් එකක් තමයි Sinhala Snap! ෆොටෝස් වලට ලස්සන සිංහල වදන් දාන්න, cinematic විදියට colors වෙනස් කරන්න. එහෙමත් නැත්නම් ලස්සන photo collages හදන්න ඕන වුණත්, Snap එකෙන් ඔයාට editing studio එකක් ඔයාගේ ෆෝන් එකටම ගෙනත් දෙනවා.
+
+ප්‍රධාන පහසුකම් (Key Features):
+
+සිංහල Typography
+ජනප්‍රියම සහ ලස්සනම සිංහල fonts පාවිච්චි කරලා ලස්සනට text ඇඩ් කරන්න.
+Colors වෙනස් කරන්න, shadows, outlines සහ highlights ලස්සනටම හදාගන්න.
+සිංහල වදන්, memes, සුබපැතුම්පත් සහ social media පෝස්ට් හදන්න කියාපුම ඇප් එක.
+
+Layered Canvas
+එකම කැන්වස් එකකට ෆොටෝස්, හැඩතල සහ text layers කිහිපයක් ඇඩ් කරන්න පුළුවන්.
+ලේසියෙන්ම ඇඟිලි වලින් zoom කරන්න, කරකවන්න සහ එහා මෙහා කරන්න පහසුකම්.
+Layers උඩයට කරන්න, හංගන්න හෝ මකලා දාන්න ලේසියෙන්ම පුළුවන් smart layer panel එකක් මේකෙ තියෙනවා.
+කැමති brush size එකක් සහ color එකක් තෝරගෙන ෆොටෝ එක උඩ අඳින්න පුළුවන්.
+
+Color Grading
+එක පාරක් ටච් කරලා ලස්සනම ලස්සන presets සහ filters දාගන්න.
+Brightness, Contrast සහ Saturation වගේ sliders පාවිච්චි කරලා ෆොටෝ එකේ quality එක තවත් වැඩි කරගන්න.
+එඩිට් කරපු ෆොටෝ එකයි, ඔරිජිනල් ෆොටෝ එකයි අතර වෙනස ක්ෂණිකව බලාගන්න ෆොටෝ එක උඩ hold කරගෙන ඉන්න.
+
+Collage Maker
+ෆොටෝස් කිහිපයක් තෝරලා තත්පරෙන් ලස්සනම ලස්සන modern layouts හදාගන්න.
+Borders, කොන් වල රවුම් හැඩය සහ පරතරය කැමති විදියට හදාගන්න.
+Collage එකේ පසුබිමට ලස්සන පාටක් හරි gradient එකක් හරි දාගන්න.
+
+High-Resolution & Offline
+ඔයා හදපු ෆොටෝස් උපරිම quality එකෙන් high-resolution export කරගන්න.
+Transparent PNG විදියට හරි, size එක අඩු JPEG විදියට හරි සේව් කරගන්න.
+100% ක්ම Offline වැඩ කරන නිසා කිසිම ඩේටා කැපීමක් නැතුව ඕනෑම වෙලාවක, ඕනෑම තැනක ඉඳන් ෆොටෝස් එඩිට් කරලා සේව් කරගන්න.
+
+Modern System Experience
+ෆෝන් එකේ Light සහ Dark mode එකට ඉබේම හැඩගැහෙන ලස්සනම interface එකක්.
+ඇප් එක ඉංග්‍රීසි සහ සිංහල භාෂා දෙකෙන්ම පාවිච්චි කරන්න පුළුවන්.
+
+Transform your pictures into stunning visual stories with Snap, the ultimate Sinhala Photo Editor and Typography app! Whether you want to add beautiful Sinhala quotes to your photos, apply cinematic color grading, or create stunning photo collages, Snap provides a professional, fully-layered editing studio right in your pocket.
+
 Key Features:
-- Sinhala Typography
-- Image Customization
-- Clean UI/UX
-- Firebase analytics integrated
+
+Sinhala Typography
+• Add stylish text using the most popular and beautiful Sinhala fonts.
+• Customize colors, apply deep shadows, outlines, and highlights.
+• Perfect for creating Sinhala quotes, memes, greeting cards, and social media posts.
+
+Layered Canvas
+• Add multiple photos, shapes, and text layers onto a single canvas.
+• Intuitive pinch-to-zoom, rotate, and drag controls.
+• Re-order, hide, or delete layers easily with the smart layer management panel.
+• Freehand drawing tools with customizable brush sizes and colors.
+
+Color Grading
+• Apply gorgeous, single-tap aesthetic presets and filters.
+• Fine-tune your images using advanced adjustment sliders (Brightness, Contrast, Saturation).
+• Hold-to-compare feature to instantly see the difference between your edits and the original photo.
+
+Collage Maker
+• Select multiple photos to instantly generate clean, modern layouts.
+• Adjust grid borders, corner roundness, and spacing.
+• Add vibrant solid colors or premium gradient backgrounds behind your collages.
+
+High-Resolution & Offline
+• Export your designs in ultra-sharp High-Resolution (up to 5x Quality Scale).
+• Save as transparent PNGs or lightweight JPEGs.
+• 100% Offline Support: Edit and save your photos anytime, anywhere, without using mobile data.
+
+Modern System Experience
+• Beautifully designed interface with automatic Light and Dark mode support.
+• Bilingual interface (English & Sinhala).
+
+Download Snap today and unleash your creativity with the best Sinhala photo editing experience!

@@ -42,7 +42,7 @@ export default function Project({ project }) {
               ))}
           </div>
 
-          <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
+          <p className="text-slate-600 text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
             {project.description}
           </p>
         </div>

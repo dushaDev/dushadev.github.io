@@ -13,11 +13,11 @@ export default function Page() {
         <section id="home">
           <Home />
         </section>
-        <section id="projects">
-          <Projects />
-        </section>
         <section id="apps">
           <Apps />
+        </section>
+        <section id="projects">
+          <Projects />
         </section>
         <section id="learn">
           <Learn/>
