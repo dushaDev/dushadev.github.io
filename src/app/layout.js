@@ -3,6 +3,12 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
+const inriaSans = Inria_Sans({
+  variable: "--font-inria-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+
 export const metadata = {
   title: "dushaDev",
   description: "This is my portfolio",
