@@ -2,50 +2,47 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
+import Logo from "@/components/Logo/Logo";
 
 export default function Footer() {
   return (
-    <footer className="top-2 left-0 w-full bg-on-background p-4 shadow-[0_-4px_15px_6px_rgba(0,0,0,0.1)] py-5 relative">
+    <footer className="top-2 left-0 w-full bg-white border-t border-slate-100 p-4 py-6 relative">
       <div className="flex flex-col items-center">
-        <h2 className="text-white text-xl font-light my-3">
-          <span className="text-primary">{"{ "}</span>Dusha
-          <span className="font-bold">
-            <span className="text-primary">{"D"}</span>ev
-          </span>
-          <span className="text-primary">{" }"}</span>
-        </h2>
-        <div className="justify-center flex space-x-4 mt-3 sm:justify-center md:justify-start lg:justify-start">
+        {/* logo text in black */}
+        <Logo className="text-xl my-2" />
+        <div className="justify-center flex space-x-4 mt-2">
           <Link
             href="https://github.com/dushaDev"
             target="_blank"
-            className="text-primary text-3xl hover:text-white  transition-colors duration-200 ease-in-out"
+            className="text-primary text-2xl hover:text-slate-700 transition-colors duration-200"
           >
             <FaGithub />
           </Link>
           <Link
             href="https://www.linkedin.com/in/dushan-madushanka-360252196"
             target="_blank"
-            className="text-primary text-3xl hover:text-white transition-colors duration-200 ease-in-out"
+            className="text-primary text-2xl hover:text-slate-700 transition-colors duration-200"
           >
             <FaLinkedin />
           </Link>
           <Link
             href="https://web.facebook.com/byDushan"
             target="_blank"
-            className="text-primary text-3xl hover:text-white transition-colors duration-200 ease-in-out"
+            className="text-primary text-2xl hover:text-slate-700 transition-colors duration-200"
           >
             <FaFacebook />
           </Link>
         </div>
-        <p className="text-sm text-gray-400 font-medium my-6">
+        <p className="text-xs text-slate-400 font-medium my-4">
           Copyright © DushaDev - All Rights Reserved
         </p>
       </div>
       <a
         href="#home"
-        className="absolute top-4 right-6 text-white text-4xl hover:text-primary transition-colors duration-200 ease-in-out"
+        className="absolute top-4 right-6 text-slate-400 hover:text-primary transition-colors duration-200"
+        aria-label="Scroll to top"
       >
-        <IoIosArrowUp />
+        <IoIosArrowUp size={28} />
       </a>
     </footer>
   );
