@@ -1,0 +1,31 @@
+Experience the massive YTS library with a high-performance, native interface.
+
+YTS Browser is engineered with cutting-edge Flutter technology, delivering a fluid 60fps experience that eliminates the lag of traditional web browsing. Designed for speed and usability, this application provides a dedicated mobile interface that integrates seamlessly with your installed torrent clients.
+
+🚀 Key Features:
+
+Native Performance: Enjoy buttery-smooth scrolling and instant page transitions tailored specifically for mobile devices.
+
+Advanced Search: Filter the extensive library in seconds by Quality (720p, 1080p, 3D), Genre, and Rating.
+
+Direct Magnet Integration: One-tap execution to open magnet links directly in your preferred client (e.g., Flud, 1DM).
+
+Comprehensive Details: View high-resolution posters, full cast lists, director info, and technical specs including seed/peer counts.
+
+Built-in Media: Preview movies instantly using the integrated YouTube trailer player.
+
+Offline Favorites: Curate your personal watchlist by saving titles locally for later access.
+
+Smart Connectivity: Intelligent network monitoring handles connection drops gracefully without disrupting your experience.
+
+Dark Mode: A sleek, battery-efficient dark interface designed for comfortable late-night browsing.
+
+⚙️ Technical Specifications:
+
+Architecture: MVVM Clean Architecture
+
+Performance: Optimized 60fps Rendering
+
+Compatibility: Android 8.0+
+
+App Size: Lightweight (<16MB)

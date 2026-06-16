@@ -1,0 +1,7 @@
+name: Sinhala Snap
+time: 2026 June
+tags: mobile, utility
+playstore: https://play.google.com/store/apps/details?id=com.dushadev.sinhalasnap
+appgallery: https://urldra.cloud.huawei.com/AS6u59lUGI
+techStack: Flutter, Android
+image: 

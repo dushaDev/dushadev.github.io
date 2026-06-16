@@ -1,0 +1,6 @@
+name: YTS Movie Browser
+time: 2026 June
+tags: mobile, entertainment
+apk: https://apkpure.com/p/com.dushadev.yts_movie_browser
+techStack: Flutter, Android
+image:
