@@ -82,7 +82,7 @@ export default function Contact() {
               <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <FaEnvelope size={18} />
               </div>
-              <span className="break-all font-medium text-sm md:text-base">dushanmadushankabeligala9@gmail.com</span>
+              <span className="break-all font-medium text-sm md:text-base">dushanhello@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4 text-slate-600">
               <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
